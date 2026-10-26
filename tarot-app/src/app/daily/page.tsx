@@ -317,7 +317,7 @@ export default function DailyPage() {
                 </p>
 
                 <h2>
-                  カードを見せてください
+                  <span className="dailyTitleDesktop">カードを見せてください</span><span className="dailyTitleMobile">カードを見せて<br />ください</span>
                 </h2>
               </div>
             </div>
@@ -1073,7 +1073,27 @@ export default function DailyPage() {
               82px 1fr;
           }
 
-          .previewContent img {
+          .p
+        /* daily-title-mobile-fix */
+        .dailyTitleDesktop {
+          display: inline;
+        }
+
+        .dailyTitleMobile {
+          display: none;
+        }
+
+        @media (max-width: 768px) {
+          .dailyTitleDesktop {
+            display: none;
+          }
+
+          .dailyTitleMobile {
+            display: inline;
+          }
+        }
+
+        reviewContent img {
             width: 82px;
             height: 115px;
           }

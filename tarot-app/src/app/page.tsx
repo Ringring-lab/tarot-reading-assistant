@@ -11,37 +11,37 @@ const kleeOne = Klee_One({
 
 export default function Home() {
   return (
-    <main className="page">
-      <div className="frame">
+    <main className="tarotHome-page">
+      <div className="tarotHome-frame">
         {/* ステンドグラス装飾 */}
-        <div className="glassLine glassTop" aria-hidden="true">
-          <span className="coral" />
-          <span className="yellow" />
-          <span className="teal" />
-          <span className="mint" />
-          <span className="blue" />
-          <span className="yellow" />
-          <span className="coral" />
+        <div className="tarotHome-glassLine tarotHome-glassTop" aria-hidden="true">
+          <span className="tarotHome-homeGlassCoral" />
+          <span className="tarotHome-homeGlassYellow" />
+          <span className="tarotHome-homeGlassTeal" />
+          <span className="tarotHome-homeGlassMint" />
+          <span className="tarotHome-homeGlassBlue" />
+          <span className="tarotHome-homeGlassYellow" />
+          <span className="tarotHome-homeGlassCoral" />
         </div>
 
-        <div className="glassLine glassBottom" aria-hidden="true">
-          <span className="blue" />
-          <span className="mint" />
-          <span className="yellow" />
-          <span className="coral" />
-          <span className="teal" />
-          <span className="yellow" />
-          <span className="blue" />
+        <div className="tarotHome-glassLine tarotHome-glassBottom" aria-hidden="true">
+          <span className="tarotHome-homeGlassBlue" />
+          <span className="tarotHome-homeGlassMint" />
+          <span className="tarotHome-homeGlassYellow" />
+          <span className="tarotHome-homeGlassCoral" />
+          <span className="tarotHome-homeGlassTeal" />
+          <span className="tarotHome-homeGlassYellow" />
+          <span className="tarotHome-homeGlassBlue" />
         </div>
 
-        <div className="sideDecor leftDecor" aria-hidden="true">
+        <div className="tarotHome-sideDecor tarotHome-leftDecor" aria-hidden="true">
           <span>☀</span>
           <span>✦</span>
           <span>❋</span>
           <span>☾</span>
         </div>
 
-        <div className="sideDecor rightDecor" aria-hidden="true">
+        <div className="tarotHome-sideDecor tarotHome-rightDecor" aria-hidden="true">
           <span>☾</span>
           <span>❋</span>
           <span>✦</span>
@@ -49,26 +49,29 @@ export default function Home() {
         </div>
 
         {/* HERO */}
-        <section className="hero">
-          <div className="brandPill">
+        <section className="tarotHome-hero">
+          <div className="tarotHome-brandPill">
             <span>✦</span>
             Tarot Reading Assistant
           </div>
 
-          <div className="symbols" aria-hidden="true">
+          <div className="tarotHome-symbols" aria-hidden="true">
             <span>☀</span>
             <span>✦</span>
             <span>☾</span>
           </div>
 
-          <p className="eyebrow">
+          <p className="tarotHome-eyebrow">
             YOUR CARDS, YOUR INTUITION
           </p>
 
-          <h1 className={`${kleeOne.className} heroTitle`}>
-            <span>お気に入りのタロットカードを、</span>
-            <span className="accent">毎日のバイブルに。</span>
-          </h1>
+          <h1 className={`${kleeOne.className} tarotHome-heroTitle`}>
+              お気に入りの
+              <br className="tarotHome-mobileBreak" />
+              タロットカードを、
+              <br />
+              <span>毎日のバイブルに。</span>
+            </h1>
 
           <p className={`${kleeOne.className} heroSub`}>
             あなたが引いたカードを、
@@ -76,12 +79,12 @@ export default function Home() {
             一緒に読み解く。
           </p>
 
-          <div className="easyBadge">
-            <span className="check">✓</span>
+          <div className="tarotHome-easyBadge">
+            <span className="tarotHome-check">✓</span>
             意味を覚えなくてもOK！
           </div>
 
-          <p className="heroDescription">
+          <p className="tarotHome-heroDescription">
             自分でシャッフルして、自分の直感で引いた一枚。
             <br />
             カードを選ぶか写真を撮れば、
@@ -89,19 +92,21 @@ export default function Home() {
             今日のテーマに合わせて読み解きをお手伝いします。
           </p>
 
-          <div className="prepareBox">
-            <div className="prepareIcon">☀</div>
+          <div className="tarotHome-prepareBox">
+            <div className="tarotHome-prepareIcon">☀</div>
 
-            <div className="prepareText">
-              <span className="prepareLabel">
+            <div className="tarotHome-prepareText">
+              <span className="tarotHome-prepareLabel">
                 STEP 01
               </span>
 
               <strong>
-                まずは、お気に入りのタロットカードを
-                <br className="mobileBreak" />
-                手元に用意してください。
-              </strong>
+                  まずは、お気に入りの
+                  <br className="tarotHome-mobileBreak" />
+                  タロットカードを
+                  <br />
+                  手元に用意してください。
+                </strong>
 
               <span>
                 自分でシャッフルして、直感で1枚引いてみましょう。
@@ -109,43 +114,43 @@ export default function Home() {
             </div>
           </div>
 
-          <Link href="/daily" className="mainButton">
-            <div className="buttonIcon">☀</div>
+          <Link href="/daily" className="tarotHome-mainButton">
+            <div className="tarotHome-buttonIcon">☀</div>
 
-            <div className="buttonText">
-              <span className="buttonMini">
+            <div className="tarotHome-buttonText">
+              <span className="tarotHome-buttonMini">
                 カードを引いたら
               </span>
-              <span className="buttonMain">
+              <span className="tarotHome-buttonMain">
                 今日の1枚を読む
               </span>
             </div>
 
-            <span className="arrow">→</span>
+            <span className="tarotHome-arrow">→</span>
           </Link>
 
-          <p className="buttonNote">
+          <p className="tarotHome-buttonNote">
             手動で選んでも、写真から読み取ってもOK
           </p>
         </section>
 
         {/* HOW */}
-        <section className="howSection">
-          <p className="sectionEyebrow">
+        <section className="tarotHome-howSection">
+          <p className="tarotHome-sectionEyebrow">
             ✦ タロットを、もっと気軽に。
           </p>
 
-          <h2 className="sectionTitle">
+          <h2 className="tarotHome-sectionTitle">
             本を開いて探さなくても、
             <br />
             あなたの一枚が読める。
           </h2>
 
-          <div className="steps">
-            <div className="stepCard tealCard">
-              <span className="stepNumber">01</span>
+          <div className="tarotHome-steps">
+            <div className="tarotHome-stepCard tarotHome-tealCard">
+              <span className="tarotHome-stepNumber">01</span>
 
-              <div className="stepIcon">◇</div>
+              <div className="tarotHome-stepIcon">◇</div>
 
               <h3>自分で引く</h3>
 
@@ -158,12 +163,12 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="stepArrow">→</div>
+            <div className="tarotHome-stepArrow">→</div>
 
-            <div className="stepCard goldCard">
-              <span className="stepNumber">02</span>
+            <div className="tarotHome-stepCard tarotHome-goldCard">
+              <span className="tarotHome-stepNumber">02</span>
 
-              <div className="stepIcon">▣</div>
+              <div className="tarotHome-stepIcon">▣</div>
 
               <h3>カードを伝える</h3>
 
@@ -176,12 +181,12 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="stepArrow">→</div>
+            <div className="tarotHome-stepArrow">→</div>
 
-            <div className="stepCard coralCard">
-              <span className="stepNumber">03</span>
+            <div className="tarotHome-stepCard tarotHome-coralCard">
+              <span className="tarotHome-stepNumber">03</span>
 
-              <div className="stepIcon">✦</div>
+              <div className="tarotHome-stepIcon">✦</div>
 
               <h3>一緒に読む</h3>
 
@@ -197,19 +202,19 @@ export default function Home() {
         </section>
 
         {/* WHY */}
-        <section className="whySection">
+        <section className="tarotHome-whySection">
           <div className="whyCopy">
-            <p className="englishLabel">
+            <p className="tarotHome-englishLabel">
               WHY TAROT READING ASSISTANT?
             </p>
 
-            <h2 className="whyTitle">
+            <h2 className="tarotHome-whyTitle">
               読み方がわからなくても、
               <br />
               タロットは楽しめる。
             </h2>
 
-            <div className="questions">
+            <div className="tarotHome-questions">
               <p>「このカード、どういう意味だっけ？」</p>
               <p>「逆位置になるとどう読むの？」</p>
               <p>
@@ -217,39 +222,39 @@ export default function Home() {
               </p>
             </div>
 
-            <p className="whyStrong">
+            <p className="tarotHome-whyStrong">
               そんなところから、一緒に読みます。
             </p>
           </div>
 
-          <div className="cardIllustration" aria-hidden="true">
-            <div className="fakeCard cardBlue">☾</div>
-            <div className="fakeCard cardYellow">☀</div>
-            <div className="fakeCard cardRed">✦</div>
+          <div className="tarotHome-cardIllustration" aria-hidden="true">
+            <div className="tarotHome-fakeCard tarotHome-cardBlue">☾</div>
+            <div className="tarotHome-fakeCard tarotHome-cardYellow">☀</div>
+            <div className="tarotHome-fakeCard tarotHome-cardRed">✦</div>
           </div>
         </section>
 
         {/* READING MENU */}
-        <section className="readingSection">
-          <p className="englishLabel centered">
+        <section className="tarotHome-readingSection">
+          <p className="tarotHome-englishLabel tarotHome-centered">
             CHOOSE YOUR READING
           </p>
 
-          <h2 className="readingTitle">
+          <h2 className="tarotHome-readingTitle">
             今日は、何を読もう？
           </h2>
 
-          <div className="readingGrid">
+          <div className="tarotHome-readingGrid">
             <Link
               href="/daily"
-              className="readingCard availableCard"
+              className="homeReadingCard tarotHome-availableCard"
             >
-              <div className="readingTop">
-                <div className="readingIcon sunIcon">
+              <div className="tarotHome-readingTop">
+                <div className="tarotHome-readingIcon tarotHome-sunIcon">
                   ☀
                 </div>
 
-                <span className="status availableStatus">
+                <span className="tarotHome-status tarotHome-availableStatus">
                   AVAILABLE
                 </span>
               </div>
@@ -261,25 +266,25 @@ export default function Home() {
                 気になるテーマを一枚から読み解きます。
               </p>
 
-              <div className="tags">
+              <div className="tarotHome-tags">
                 <span>手動入力</span>
                 <span>写真判定</span>
                 <span>正位置・逆位置</span>
               </div>
 
-              <div className="cardButton">
+              <div className="tarotHome-cardButton">
                 <span>今日の1枚を読む</span>
                 <span>→</span>
               </div>
             </Link>
 
-            <div className="readingCard comingCard">
-              <div className="readingTop">
-                <div className="readingIcon starIcon">
+            <div className="homeReadingCard tarotHome-comingCard">
+              <div className="tarotHome-readingTop">
+                <div className="tarotHome-readingIcon tarotHome-starIcon">
                   ✦
                 </div>
 
-                <span className="status comingStatus">
+                <span className="tarotHome-status tarotHome-comingStatus">
                   COMING SOON
                 </span>
               </div>
@@ -292,13 +297,13 @@ export default function Home() {
                 もう少し深く読み解きます。
               </p>
 
-              <div className="tags">
+              <div className="tarotHome-tags">
                 <span>3枚引き</span>
                 <span>テーマ別</span>
                 <span>流れを読む</span>
               </div>
 
-              <div className="soonButton">
+              <div className="tarotHome-soonButton">
                 近日公開
               </div>
             </div>
@@ -306,10 +311,10 @@ export default function Home() {
         </section>
 
         {/* FINAL */}
-        <section className="finalSection">
-          <div className="finalSpark">✦</div>
+        <section className="tarotHome-finalSection">
+          <div className="tarotHome-finalSpark">✦</div>
 
-          <h2 className={`${kleeOne.className} finalTitle`}>
+          <h2 className={`${kleeOne.className} tarotHome-finalTitle`}>
             引くのはあなた。
             <br />
             読むのは一緒に。
@@ -323,19 +328,19 @@ export default function Home() {
             あなた自身が引いたカードを大切にします。
           </p>
 
-          <Link href="/daily" className="finalButton">
-            <span className="finalButtonIcon">☀</span>
+          <Link href="/daily" className="tarotHome-finalButton">
+            <span className="tarotHome-finalButtonIcon">☀</span>
 
-            <span className="finalButtonText">
+            <span className="tarotHome-finalButtonText">
               今日のカードを読んでみる
             </span>
 
-            <span className="finalArrow">→</span>
+            <span className="tarotHome-finalArrow">→</span>
           </Link>
         </section>
 
         <footer>
-          <div className="footerSymbols">
+          <div className="tarotHome-footerSymbols">
             ☀　✦　☾
           </div>
 
@@ -354,7 +359,7 @@ export default function Home() {
           box-sizing: border-box;
         }
 
-        .page {
+        .tarotHome-page {
           min-height: 100vh;
           padding: 16px;
 
@@ -384,7 +389,7 @@ export default function Home() {
           color: #16202c;
         }
 
-        .frame {
+        .tarotHome-frame {
           position: relative;
           max-width: 1440px;
           margin: 0 auto;
@@ -406,7 +411,7 @@ export default function Home() {
             0 22px 55px rgba(28, 83, 93, 0.08);
         }
 
-        .frame::before {
+        .tarotHome-frame::before {
           content: "";
           position: absolute;
           inset: 11px;
@@ -419,7 +424,7 @@ export default function Home() {
         }
 
         /* ステンドグラス */
-        .glassLine {
+        .tarotHome-glassLine {
           position: absolute;
           z-index: 8;
 
@@ -427,17 +432,17 @@ export default function Home() {
           gap: 2px;
         }
 
-        .glassTop {
+        .tarotHome-glassTop {
           top: 7px;
           left: 55px;
         }
 
-        .glassBottom {
+        .tarotHome-glassBottom {
           right: 55px;
           bottom: 7px;
         }
 
-        .glassLine span {
+        .tarotHome-glassLine span {
           display: block;
           width: 35px;
           height: 14px;
@@ -445,27 +450,27 @@ export default function Home() {
           border-radius: 2px;
         }
 
-        .coral {
+        .tarotHome-homeGlassCoral {
           background: #b9543e;
         }
 
-        .yellow {
+        .tarotHome-homeGlassYellow {
           background: #d7ad25;
         }
 
-        .teal {
+        .tarotHome-homeGlassTeal {
           background: #278b9b;
         }
 
-        .mint {
+        .tarotHome-homeGlassMint {
           background: #78b79a;
         }
 
-        .blue {
+        .tarotHome-homeGlassBlue {
           background: #377ca2;
         }
 
-        .sideDecor {
+        .tarotHome-sideDecor {
           position: absolute;
           z-index: 1;
 
@@ -479,20 +484,20 @@ export default function Home() {
           pointer-events: none;
         }
 
-        .leftDecor {
+        .tarotHome-leftDecor {
           top: 380px;
           left: 32px;
           color: #b74f3d;
         }
 
-        .rightDecor {
+        .tarotHome-rightDecor {
           top: 500px;
           right: 32px;
           color: #248295;
         }
 
         /* HERO */
-        .hero {
+        .tarotHome-hero {
           position: relative;
           z-index: 3;
 
@@ -507,7 +512,7 @@ export default function Home() {
           text-align: center;
         }
 
-        .brandPill {
+        .tarotHome-brandPill {
           margin-bottom: 38px;
           padding: 10px 21px;
 
@@ -521,12 +526,12 @@ export default function Home() {
           letter-spacing: 0.05em;
         }
 
-        .brandPill span {
+        .tarotHome-brandPill span {
           margin-right: 8px;
           color: #b78a14;
         }
 
-        .symbols {
+        .tarotHome-symbols {
           display: flex;
           gap: 19px;
 
@@ -535,20 +540,20 @@ export default function Home() {
           font-size: 25px;
         }
 
-        .symbols span:nth-child(1) {
+        .tarotHome-symbols span:nth-child(1) {
           color: #c5990b;
         }
 
-        .symbols span:nth-child(2) {
+        .tarotHome-symbols span:nth-child(2) {
           color: #ad5140;
         }
 
-        .symbols span:nth-child(3) {
+        .tarotHome-symbols span:nth-child(3) {
           color: #21687b;
         }
 
-        .eyebrow,
-        .englishLabel {
+        .tarotHome-eyebrow,
+        .tarotHome-englishLabel {
           margin: 0;
 
           color: #19586a;
@@ -558,7 +563,7 @@ export default function Home() {
           letter-spacing: 0.2em;
         }
 
-        .heroTitle {
+        .tarotHome-heroTitle {
           margin: 24px 0;
 
           display: flex;
@@ -571,15 +576,15 @@ export default function Home() {
           letter-spacing: 0.025em;
         }
 
-        .heroTitle > span {
+        .tarotHome-heroTitle > span {
           white-space: nowrap;
         }
 
-        .heroTitle .accent {
+        .tarotHome-heroTitle .tarotHome-accent {
           color: #a84d3a;
         }
 
-        .heroSub {
+        .tarotHome-heroSub {
           margin: 0;
 
           font-size: 25px;
@@ -588,7 +593,7 @@ export default function Home() {
           letter-spacing: 0.02em;
         }
 
-        .easyBadge {
+        .tarotHome-easyBadge {
           margin-top: 24px;
           padding: 10px 18px;
 
@@ -606,7 +611,7 @@ export default function Home() {
           font-weight: 700;
         }
 
-        .check {
+        .tarotHome-check {
           width: 23px;
           height: 23px;
 
@@ -621,7 +626,7 @@ export default function Home() {
           font-size: 13px;
         }
 
-        .heroDescription {
+        .tarotHome-heroDescription {
           margin: 34px 0 28px;
 
           color: #59636c;
@@ -631,7 +636,7 @@ export default function Home() {
         }
 
         /* カードを用意 */
-        .prepareBox {
+        .tarotHome-prepareBox {
           width: min(620px, 100%);
           margin-bottom: 16px;
           padding: 20px 23px;
@@ -655,7 +660,7 @@ export default function Home() {
           box-shadow: 0 12px 28px rgba(35, 98, 110, 0.09);
         }
 
-        .prepareIcon {
+        .tarotHome-prepareIcon {
           width: 56px;
           height: 56px;
 
@@ -672,13 +677,13 @@ export default function Home() {
           font-size: 27px;
         }
 
-        .prepareText {
+        .tarotHome-prepareText {
           display: flex;
           flex-direction: column;
           gap: 5px;
         }
 
-        .prepareLabel {
+        .tarotHome-prepareLabel {
           color: #197083;
 
           font-size: 10px;
@@ -686,22 +691,22 @@ export default function Home() {
           letter-spacing: 0.13em;
         }
 
-        .prepareText strong {
+        .tarotHome-prepareText strong {
           font-size: 16px;
           line-height: 1.55;
         }
 
-        .prepareText > span:last-child {
+        .tarotHome-prepareText > span:last-child {
           color: #657078;
           font-size: 12px;
         }
 
-        .mobileBreak {
+        .tarotHome-mobileBreak {
           display: none;
         }
 
         /* HERO CTA */
-        .mainButton {
+        .tarotHome-mainButton {
           width: min(620px, 100%);
           min-height: 96px;
           padding: 21px 27px;
@@ -734,7 +739,7 @@ export default function Home() {
             box-shadow 0.18s ease;
         }
 
-        .mainButton:hover {
+        .tarotHome-mainButton:hover {
           transform: translateY(-4px);
 
           box-shadow:
@@ -742,35 +747,35 @@ export default function Home() {
             inset 0 1px 0 rgba(255, 255, 255, 0.2);
         }
 
-        .buttonIcon {
+        .tarotHome-buttonIcon {
           color: #f3c425;
           font-size: 34px;
         }
 
-        .buttonText {
+        .tarotHome-buttonText {
           flex: 1;
 
           display: flex;
           flex-direction: column;
         }
 
-        .buttonMini {
+        .tarotHome-buttonMini {
           margin-bottom: 4px;
 
           font-size: 11px;
           opacity: 0.8;
         }
 
-        .buttonMain {
+        .tarotHome-buttonMain {
           font-size: 22px;
           font-weight: 800;
         }
 
-        .arrow {
+        .tarotHome-arrow {
           font-size: 28px;
         }
 
-        .buttonNote {
+        .tarotHome-buttonNote {
           margin-top: 13px;
 
           color: #737a7e;
@@ -778,7 +783,7 @@ export default function Home() {
         }
 
         /* HOW */
-        .howSection {
+        .tarotHome-howSection {
           position: relative;
           z-index: 3;
 
@@ -797,7 +802,7 @@ export default function Home() {
           border-bottom: 1px solid rgba(35, 124, 141, 0.08);
         }
 
-        .sectionEyebrow {
+        .tarotHome-sectionEyebrow {
           margin: 0;
 
           color: #966a1f;
@@ -806,7 +811,7 @@ export default function Home() {
           font-weight: 700;
         }
 
-        .sectionTitle {
+        .tarotHome-sectionTitle {
           margin: 28px auto 55px;
 
           font-size: clamp(34px, 4vw, 54px);
@@ -814,7 +819,7 @@ export default function Home() {
           line-height: 1.5;
         }
 
-        .steps {
+        .tarotHome-steps {
           max-width: 1180px;
           margin: 0 auto;
 
@@ -824,7 +829,7 @@ export default function Home() {
           gap: 18px;
         }
 
-        .stepCard {
+        .tarotHome-stepCard {
           min-height: 360px;
           padding: 30px;
 
@@ -839,19 +844,19 @@ export default function Home() {
           text-align: center;
         }
 
-        .tealCard {
+        .tarotHome-tealCard {
           border-top-color: #2c8997;
         }
 
-        .goldCard {
+        .tarotHome-goldCard {
           border-top-color: #c49a1b;
         }
 
-        .coralCard {
+        .tarotHome-coralCard {
           border-top-color: #ae513e;
         }
 
-        .stepNumber {
+        .tarotHome-stepNumber {
           display: block;
 
           color: #6c7175;
@@ -862,7 +867,7 @@ export default function Home() {
           font-weight: 800;
         }
 
-        .stepIcon {
+        .tarotHome-stepIcon {
           width: 68px;
           height: 68px;
           margin: 52px auto 35px;
@@ -879,24 +884,24 @@ export default function Home() {
           font-size: 30px;
         }
 
-        .goldCard .stepIcon {
+        .tarotHome-goldCard .tarotHome-stepIcon {
           background: #f3e4ad;
           color: #9f7a0a;
         }
 
-        .coralCard .stepIcon {
+        .tarotHome-coralCard .tarotHome-stepIcon {
           background: #efe0d9;
           color: #a64c3d;
         }
 
-        .stepCard h3 {
+        .tarotHome-stepCard h3 {
           margin-bottom: 20px;
 
           font-size: 20px;
           font-weight: 600;
         }
 
-        .stepCard p {
+        .tarotHome-stepCard p {
           margin: 0;
 
           color: #505963;
@@ -905,13 +910,13 @@ export default function Home() {
           line-height: 2;
         }
 
-        .stepArrow {
+        .tarotHome-stepArrow {
           color: #5e7378;
           font-size: 20px;
         }
 
         /* WHY */
-        .whySection {
+        .tarotHome-whySection {
           position: relative;
           z-index: 3;
 
@@ -931,7 +936,7 @@ export default function Home() {
             rgba(255, 255, 255, 0.55);
         }
 
-        .whyTitle {
+        .tarotHome-whyTitle {
           margin: 24px 0 38px;
 
           font-size: clamp(36px, 4.2vw, 58px);
@@ -939,30 +944,30 @@ export default function Home() {
           line-height: 1.55;
         }
 
-        .questions {
+        .tarotHome-questions {
           color: #505866;
 
           font-size: 15px;
           line-height: 1.85;
         }
 
-        .questions p {
+        .tarotHome-questions p {
           margin: 9px 0;
         }
 
-        .whyStrong {
+        .tarotHome-whyStrong {
           margin-top: 35px;
 
           font-size: 16px;
           font-weight: 700;
         }
 
-        .cardIllustration {
+        .tarotHome-cardIllustration {
           position: relative;
           min-height: 340px;
         }
 
-        .fakeCard {
+        .tarotHome-fakeCard {
           position: absolute;
           top: 40px;
           left: 50%;
@@ -983,7 +988,7 @@ export default function Home() {
           box-shadow: 0 20px 35px rgba(0, 0, 0, 0.15);
         }
 
-        .cardBlue {
+        .tarotHome-cardBlue {
           background:
             linear-gradient(
               160deg,
@@ -996,7 +1001,7 @@ export default function Home() {
             rotate(-12deg);
         }
 
-        .cardYellow {
+        .tarotHome-cardYellow {
           z-index: 3;
 
           background:
@@ -1011,7 +1016,7 @@ export default function Home() {
             rotate(1deg);
         }
 
-        .cardRed {
+        .tarotHome-cardRed {
           color: white;
 
           background:
@@ -1027,7 +1032,7 @@ export default function Home() {
         }
 
         /* READING */
-        .readingSection {
+        .tarotHome-readingSection {
           position: relative;
           z-index: 3;
 
@@ -1041,11 +1046,11 @@ export default function Home() {
             );
         }
 
-        .centered {
+        .tarotHome-centered {
           text-align: center;
         }
 
-        .readingTitle {
+        .tarotHome-readingTitle {
           margin: 28px 0 55px;
 
           text-align: center;
@@ -1054,7 +1059,7 @@ export default function Home() {
           font-weight: 400;
         }
 
-        .readingGrid {
+        .tarotHome-readingGrid {
           max-width: 1050px;
           margin: 0 auto;
 
@@ -1067,7 +1072,7 @@ export default function Home() {
           position: relative;
 
           min-height: 470px;
-          padding: 34px;
+          padding: 44px 42px;
 
           color: inherit;
           text-decoration: none;
@@ -1082,7 +1087,7 @@ export default function Home() {
         }
 
         /* 使えるカード */
-        .availableCard {
+        .tarotHome-availableCard {
           background:
             linear-gradient(
               145deg,
@@ -1097,7 +1102,7 @@ export default function Home() {
             inset 0 0 0 5px rgba(255, 255, 255, 0.55);
         }
 
-        .availableCard:hover {
+        .tarotHome-availableCard:hover {
           transform: translateY(-6px);
 
           box-shadow:
@@ -1106,7 +1111,7 @@ export default function Home() {
         }
 
         /* Coming Soonも四角を明確に */
-        .comingCard {
+        .tarotHome-comingCard {
           background:
             linear-gradient(
               145deg,
@@ -1123,13 +1128,13 @@ export default function Home() {
           opacity: 0.72;
         }
 
-        .readingTop {
+        .tarotHome-readingTop {
           display: flex;
           justify-content: space-between;
           align-items: flex-start;
         }
 
-        .readingIcon {
+        .tarotHome-readingIcon {
           width: 64px;
           height: 64px;
 
@@ -1141,17 +1146,17 @@ export default function Home() {
           font-size: 28px;
         }
 
-        .sunIcon {
+        .tarotHome-sunIcon {
           background: #f0e1a1;
           color: #b08200;
         }
 
-        .starIcon {
+        .tarotHome-starIcon {
           background: #eee2bb;
           color: #a98010;
         }
 
-        .status {
+        .tarotHome-status {
           padding: 7px 13px;
 
           border-radius: 999px;
@@ -1161,24 +1166,24 @@ export default function Home() {
           letter-spacing: 0.1em;
         }
 
-        .availableStatus {
+        .tarotHome-availableStatus {
           background: #dff2ef;
           color: #176174;
         }
 
-        .comingStatus {
+        .tarotHome-comingStatus {
           background: #e4ddd1;
           color: #71685d;
         }
 
-        .readingCard h3 {
+        .homeReadingCard h3 {
           margin: 32px 0 20px;
 
           font-size: 28px;
           font-weight: 600;
         }
 
-        .readingCard p {
+        .homeReadingCard p {
           min-height: 88px;
           margin: 0;
 
@@ -1188,7 +1193,7 @@ export default function Home() {
           line-height: 1.9;
         }
 
-        .tags {
+        .tarotHome-tags {
           margin-top: 31px;
 
           display: flex;
@@ -1196,7 +1201,7 @@ export default function Home() {
           gap: 8px;
         }
 
-        .tags span {
+        .tarotHome-tags span {
           padding: 7px 11px;
 
           background: rgba(255, 255, 255, 0.78);
@@ -1208,7 +1213,7 @@ export default function Home() {
           font-weight: 600;
         }
 
-        .cardButton {
+        .tarotHome-cardButton {
           min-height: 61px;
           margin-top: 39px;
           padding: 0 21px;
@@ -1234,7 +1239,7 @@ export default function Home() {
           font-weight: 800;
         }
 
-        .soonButton {
+        .tarotHome-soonButton {
           min-height: 61px;
           margin-top: 39px;
           padding: 0 21px;
@@ -1253,7 +1258,7 @@ export default function Home() {
         }
 
         /* FINAL */
-        .finalSection {
+        .tarotHome-finalSection {
           position: relative;
           z-index: 3;
 
@@ -1274,14 +1279,14 @@ export default function Home() {
             );
         }
 
-        .finalSpark {
+        .tarotHome-finalSpark {
           margin-bottom: 26px;
 
           color: #b38a12;
           font-size: 28px;
         }
 
-        .finalTitle {
+        .tarotHome-finalTitle {
           margin: 0 0 34px;
 
           font-size: clamp(38px, 4.1vw, 58px);
@@ -1289,7 +1294,7 @@ export default function Home() {
           line-height: 1.55;
         }
 
-        .finalSection p {
+        .tarotHome-finalSection p {
           color: #626a72;
 
           font-size: 14px;
@@ -1297,7 +1302,7 @@ export default function Home() {
         }
 
         /* 最後も完全にボタン化 */
-        .finalButton {
+        .tarotHome-finalButton {
           width: min(430px, 100%);
           min-height: 72px;
           margin: 38px auto 0;
@@ -1330,7 +1335,7 @@ export default function Home() {
             box-shadow 0.18s ease;
         }
 
-        .finalButton:hover {
+        .tarotHome-finalButton:hover {
           transform: translateY(-4px);
 
           box-shadow:
@@ -1338,12 +1343,12 @@ export default function Home() {
             inset 0 1px 0 rgba(255, 255, 255, 0.23);
         }
 
-        .finalButtonIcon {
+        .tarotHome-finalButtonIcon {
           color: #f2c629;
           font-size: 27px;
         }
 
-        .finalButtonText {
+        .tarotHome-finalButtonText {
           flex: 1;
 
           text-align: left;
@@ -1352,7 +1357,7 @@ export default function Home() {
           font-weight: 800;
         }
 
-        .finalArrow {
+        .tarotHome-finalArrow {
           font-size: 24px;
         }
 
@@ -1371,7 +1376,7 @@ export default function Home() {
           border-top: 1px solid rgba(20, 60, 70, 0.08);
         }
 
-        .footerSymbols {
+        .tarotHome-footerSymbols {
           margin-bottom: 8px;
           color: #997516;
         }
@@ -1386,197 +1391,287 @@ export default function Home() {
         }
 
         @media (max-width: 820px) {
-          .page {
+          .tarotHome-page {
             padding: 7px;
           }
 
-          .frame {
+          .tarotHome-frame {
             border-radius: 22px;
           }
 
-          .frame::before {
+          .tarotHome-frame::before {
             inset: 6px;
             border-radius: 17px;
           }
 
-          .glassTop {
+          .tarotHome-glassTop {
             left: 25px;
           }
 
-          .glassBottom {
+          .tarotHome-glassBottom {
             right: 25px;
           }
 
-          .glassLine span {
+          .tarotHome-glassLine span {
             width: 21px;
             height: 10px;
           }
 
-          .sideDecor {
+          .tarotHome-sideDecor {
             display: none;
           }
 
-          .hero {
+          .tarotHome-hero {
             min-height: auto;
             padding: 72px 20px 70px;
           }
 
-          .brandPill {
+          .tarotHome-brandPill {
             margin-bottom: 33px;
             font-size: 11px;
           }
 
-          .heroTitle {
+          .tarotHome-heroTitle {
             font-size: clamp(31px, 8vw, 38px);
             line-height: 1.55;
           }
 
-          .heroTitle > span {
+          .tarotHome-heroTitle > span {
             white-space: normal;
           }
 
-          .heroSub {
+          .tarotHome-heroSub {
             font-size: 21px;
           }
 
-          .heroDescription {
+          .tarotHome-heroDescription {
             font-size: 13px;
           }
 
-          .prepareBox {
+          .tarotHome-prepareBox {
             padding: 17px;
           }
 
-          .prepareIcon {
+          .tarotHome-prepareIcon {
             width: 48px;
             height: 48px;
             flex-basis: 48px;
           }
 
-          .prepareText strong {
+          .tarotHome-prepareText strong {
             font-size: 14px;
           }
 
-          .mobileBreak {
+          .tarotHome-mobileBreak {
             display: inline;
           }
 
-          .mainButton {
+          .tarotHome-mainButton {
             min-height: 86px;
             padding: 18px;
 
             border-radius: 20px;
           }
 
-          .buttonIcon {
+          .tarotHome-buttonIcon {
             font-size: 28px;
           }
 
-          .buttonMain {
+          .tarotHome-buttonMain {
             font-size: 18px;
           }
 
-          .howSection,
-          .readingSection {
+          .tarotHome-howSection,
+          .tarotHome-readingSection {
             padding: 85px 20px;
           }
 
-          .sectionTitle {
+          .tarotHome-sectionTitle {
             font-size: 32px;
           }
 
-          .steps {
+          .tarotHome-steps {
             display: flex;
             flex-direction: column;
           }
 
-          .stepCard {
+          .tarotHome-stepCard {
             width: 100%;
             min-height: auto;
             padding: 28px 25px 38px;
           }
 
-          .stepIcon {
+          .tarotHome-stepIcon {
             margin: 32px auto 25px;
           }
 
-          .stepArrow {
+          .tarotHome-stepArrow {
             transform: rotate(90deg);
           }
 
-          .whySection {
+          .tarotHome-whySection {
             padding: 85px 25px;
 
             grid-template-columns: 1fr;
             gap: 30px;
           }
 
-          .whyTitle {
+          .tarotHome-whyTitle {
             font-size: 32px;
           }
 
-          .cardIllustration {
+          .tarotHome-cardIllustration {
             min-height: 280px;
             transform: scale(0.8);
           }
 
-          .readingTitle {
+          .tarotHome-readingTitle {
             font-size: 34px;
           }
 
-          .readingGrid {
+          .tarotHome-readingGrid {
             grid-template-columns: 1fr;
           }
 
-          .readingCard {
+          .homeReadingCard {
             min-height: auto;
             padding: 28px;
           }
 
-          .finalSection {
+          .tarotHome-finalSection {
             padding: 90px 25px;
           }
 
-          .finalTitle {
+          .tarotHome-finalTitle {
             font-size: 35px;
           }
         }
 
         @media (max-width: 480px) {
-          .heroTitle {
+          .tarotHome-heroTitle {
             font-size: 31px;
           }
 
-          .heroSub {
+          .tarotHome-heroSub {
             font-size: 19px;
           }
 
-          .easyBadge {
+          .tarotHome-easyBadge {
             font-size: 13px;
           }
 
-          .sectionTitle,
-          .whyTitle,
-          .readingTitle,
-          .finalTitle {
-            font-size: 29px;
+          .tarotHome-sectionTitle,
+          .tarotHome-whyTitle,
+          .tarotHome-readingTitle,
+          .tarotHome-finalTitle {
+            font-size: 24px;
+            line-height: 1.45;
           }
 
-          .cardIllustration {
+          .homeReadingCard h3 {
+            font-size: 20px;
+            line-height: 1.4;
+            letter-spacing: -0.03em;
+            word-break: keep-all;
+            overflow-wrap: normal;
+          }
+
+          .homeReadingCard p {
+            font-size: 13px;
+            line-height: 1.8;
+          }
+
+          .tarotHome-whyTitle {
+            font-size: 23px;
+            line-height: 1.5;
+          }
+
+          .tarotHome-sectionTitle {
+            font-size: 23px;
+            line-height: 1.5;
+          }
+
+          .tarotHome-cardIllustration {
             margin: -25px -50px;
             transform: scale(0.67);
           }
 
-          .finalButton {
+          .tarotHome-finalButton {
             min-height: 68px;
             padding: 0 18px;
           }
 
-          .finalButtonText {
+          .tarotHome-finalButtonText {
             font-size: 14px;
           }
         }
-      `}</style>
+      
+        /* HOME READING CARD POLISH */
+        .homeReadingCard {
+          padding: 44px 42px;
+        }
+
+        .homeReadingCard h3 {
+          margin-top: 22px;
+          margin-bottom: 14px;
+        }
+
+        .homeReadingCard p {
+          margin-top: 0;
+          line-height: 1.85;
+        }
+
+        @media (max-width: 480px) {
+          .homeReadingCard {
+            padding: 28px 24px;
+            min-height: auto;
+          }
+
+          .homeReadingCard h3 {
+            font-size: 20px;
+            line-height: 1.4;
+            letter-spacing: -0.03em;
+            word-break: keep-all;
+            overflow-wrap: normal;
+          }
+
+          .homeReadingCard p {
+            font-size: 13px;
+            line-height: 1.8;
+          }
+        }
+
+
+        /* reading-card-spacing-v1 */
+
+        /* PC：2枚の選択カードにゆったりした余白 */
+        @media (min-width: 769px) {
+          .homeReadingCard {
+            padding: 44px 42px;
+          }
+        }
+
+        /* スマホ：端に詰まらず、でも広げすぎない */
+        @media (max-width: 768px) {
+          .homeReadingCard {
+            padding: 30px 24px 26px;
+          }
+
+          .homeReadingCard h3 {
+            font-size: 22px;
+            line-height: 1.4;
+            letter-spacing: -0.03em;
+            word-break: keep-all;
+            overflow-wrap: normal;
+          }
+
+          .homeReadingCard p {
+            font-size: 14px;
+            line-height: 1.8;
+          }
+        }
+
+        `}</style>
     </main>
   );
 }
