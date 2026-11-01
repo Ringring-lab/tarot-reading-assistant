@@ -165,10 +165,13 @@ export default function DailyPage() {
             <div className="sunMark">☀</div>
 
             <p className="eyebrow">
-              DAILY TAROT
+              DAILY READING
             </p>
 
-            <h1>今日の1枚を読み解く</h1>
+            <h1>
+            <span className="dailyTitleLine">今日の1枚を</span>
+            <span className="dailyTitleLine">読み解く</span>
+          </h1>
 
             <p className="lead">
               今から1枚引いても、
@@ -1098,7 +1101,464 @@ export default function DailyPage() {
             height: 115px;
           }
         }
-      `}</style>
+      
+
+        /* ========================================
+           DAILY TOP BRAND UNIFY V1
+           Top page is the single visual reference
+        ======================================== */
+
+        .page {
+          min-height: 100vh;
+          padding: 18px 12px 42px;
+          color: #454543;
+          background: transparent;
+        }
+
+        /* 旧・虹色フレームを撤去 */
+        .stainedFrame {
+          width: min(520px, 100%);
+          margin: 0 auto;
+          padding: 0;
+          border: 0;
+          border-radius: 32px;
+          background: transparent;
+        }
+
+        /* トップと同じミルキーな紙面 */
+        .paper {
+          position: relative;
+          overflow: hidden;
+          padding: 34px 18px 36px;
+          border: 1px solid rgba(184, 162, 109, 0.28);
+          border-radius: 30px;
+          background: rgba(255, 253, 248, 0.91);
+          box-shadow:
+            0 18px 48px rgba(104, 92, 73, 0.07);
+        }
+
+        /*
+          トップの花＋ステンドグラスのDNAを
+          「枠」ではなく角の装飾として入れる
+        */
+        .paper::before,
+        .paper::after {
+          content: "";
+          position: absolute;
+          pointer-events: none;
+          z-index: 0;
+          width: 155px;
+          height: 145px;
+          opacity: 0.72;
+        }
+
+        .paper::before {
+          top: -34px;
+          left: -42px;
+          background:
+            radial-gradient(
+              ellipse at 35% 33%,
+              rgba(234, 217, 149, 0.60) 0 18%,
+              transparent 19%
+            ),
+            radial-gradient(
+              ellipse at 63% 28%,
+              rgba(207, 227, 217, 0.66) 0 17%,
+              transparent 18%
+            ),
+            radial-gradient(
+              ellipse at 30% 65%,
+              rgba(223, 164, 156, 0.52) 0 19%,
+              transparent 20%
+            ),
+            radial-gradient(
+              ellipse at 68% 65%,
+              rgba(219, 231, 230, 0.72) 0 18%,
+              transparent 19%
+            );
+          border-radius: 52% 48% 54% 46%;
+          transform: rotate(-9deg);
+        }
+
+        .paper::after {
+          top: -46px;
+          right: -56px;
+          width: 138px;
+          height: 132px;
+          background:
+            radial-gradient(
+              ellipse at 38% 38%,
+              rgba(223, 164, 156, 0.52) 0 18%,
+              transparent 19%
+            ),
+            radial-gradient(
+              ellipse at 66% 35%,
+              rgba(234, 217, 149, 0.56) 0 17%,
+              transparent 18%
+            ),
+            radial-gradient(
+              ellipse at 48% 68%,
+              rgba(207, 227, 217, 0.65) 0 20%,
+              transparent 21%
+            );
+          transform: rotate(13deg);
+        }
+
+        .paper > * {
+          position: relative;
+          z-index: 1;
+        }
+
+        /* ---------- HERO ---------- */
+
+        .header {
+          padding: 16px 8px 28px;
+          text-align: center;
+        }
+
+        .sunMark {
+          display: none;
+        }
+
+        .eyebrow,
+        .miniLabel {
+          margin: 0;
+          color: #a87b72;
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: 0.18em;
+        }
+
+        /* 明朝を完全に撤去 */
+        .paper .header h1 {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 0;
+          margin: 9px 0 12px;
+
+          font-family:
+            var(--font-zen-maru),
+            "Hiragino Sans",
+            "Yu Gothic",
+            sans-serif;
+
+          font-size: 31px;
+          font-weight: 500;
+          line-height: 1.42;
+          letter-spacing: -0.02em;
+          color: #454543;
+        }
+
+        .dailyTitleLine {
+          display: block;
+          white-space: nowrap;
+        }
+
+        .lead {
+          max-width: 370px;
+          margin: 0 auto;
+          color: #77736d;
+          font-size: 14px;
+          line-height: 1.95;
+        }
+
+        /* ---------- SECTION CARDS ---------- */
+
+        .themeSection,
+        .cardSection {
+          margin-top: 14px;
+          padding: 22px 18px;
+          border: 1px solid rgba(184, 162, 109, 0.23);
+          border-radius: 26px;
+          background: rgba(255, 255, 255, 0.50);
+          box-shadow: none;
+        }
+
+        .sectionHeading {
+          display: flex;
+          align-items: center;
+          gap: 13px;
+          margin-bottom: 18px;
+        }
+
+        .sectionHeading > div:last-child {
+          min-width: 0;
+        }
+
+        .sectionHeading h2 {
+          margin: 4px 0 0;
+          font-family:
+            var(--font-zen-maru),
+            "Hiragino Sans",
+            "Yu Gothic",
+            sans-serif;
+          font-size: 21px;
+          font-weight: 500;
+          line-height: 1.5;
+          letter-spacing: -0.01em;
+          color: #454543;
+        }
+
+        .dailyNoBreak {
+          white-space: nowrap;
+        }
+
+        .roundIcon {
+          flex: 0 0 auto;
+          width: 58px;
+          height: 58px;
+          border: 0;
+          box-shadow: none;
+        }
+
+        .themeIcon {
+          color: #a78b40;
+          background: rgba(234, 217, 149, 0.48);
+        }
+
+        .cardIcon {
+          color: #6c9ba1;
+          background: rgba(219, 231, 230, 0.72);
+        }
+
+        .sectionDescription {
+          margin-top: 3px;
+          color: #77736d;
+          font-size: 13px;
+          line-height: 1.8;
+        }
+
+        /* ---------- THEME OPTIONS ---------- */
+
+        .themeOptions {
+          display: grid;
+          gap: 11px;
+        }
+
+        .themeChoice {
+          min-height: 88px;
+          padding: 16px 17px;
+          border: 1px solid rgba(184, 162, 109, 0.20);
+          border-radius: 21px;
+          color: #454543;
+          background: rgba(255,255,255,0.58);
+          box-shadow: none;
+        }
+
+        .themeChoice.selected {
+          border-color: rgba(184, 162, 109, 0.42);
+          background:
+            linear-gradient(
+              135deg,
+              rgba(247, 239, 201, 0.92),
+              rgba(255, 253, 248, 0.80)
+            );
+        }
+
+        .radio {
+          color: #b8a26d;
+          font-size: 20px;
+        }
+
+        .choiceText strong {
+          color: #454543;
+          font-size: 15px;
+          font-weight: 600;
+          line-height: 1.55;
+        }
+
+        .choiceText small {
+          color: #858078;
+          font-size: 12px;
+          line-height: 1.55;
+        }
+
+        .defaultBadge {
+          background: rgba(243, 216, 211, 0.72);
+          color: #a16f68;
+          font-weight: 700;
+        }
+
+        /* ---------- CARD ACTIONS ---------- */
+
+        .cardActions {
+          display: grid;
+          gap: 12px;
+        }
+
+        .actionButton {
+          min-height: 92px;
+          padding: 16px 17px;
+          border: 1px solid rgba(184, 162, 109, 0.20);
+          border-radius: 22px;
+          color: #454543;
+          box-shadow: none;
+          transition:
+            transform 0.15s ease,
+            box-shadow 0.15s ease;
+        }
+
+        .actionButton:hover {
+          transform: translateY(-1px);
+          box-shadow: 0 8px 24px rgba(104, 92, 73, 0.07);
+        }
+
+        .manualAction {
+          background: rgba(243, 216, 211, 0.56);
+        }
+
+        .galleryAction {
+          background: rgba(207, 227, 217, 0.57);
+        }
+
+        .cameraAction {
+          background: rgba(247, 239, 201, 0.72);
+        }
+
+        .actionIcon {
+          border: 0;
+          box-shadow: none;
+        }
+
+        .manualIcon {
+          background: rgba(243, 216, 211, 0.92);
+          color: #bd7f74;
+        }
+
+        .galleryIcon {
+          background: rgba(219, 231, 230, 0.96);
+          color: #70989c;
+        }
+
+        .cameraIcon {
+          background: rgba(234, 217, 149, 0.70);
+          color: #a78b40;
+        }
+
+        .actionText {
+          min-width: 0;
+        }
+
+        .actionText strong {
+          display: block;
+          color: #454543;
+          font-size: 15px;
+          font-weight: 600;
+          line-height: 1.55;
+          white-space: nowrap;
+        }
+
+        .actionText small {
+          color: #817c74;
+          font-size: 12px;
+          line-height: 1.55;
+        }
+
+        .arrow {
+          color: #a9a299;
+          font-size: 24px;
+        }
+
+        /* 旧モバイル用強制改行は使わない */
+        .dailyTitleDesktop {
+          display: inline;
+        }
+
+        .dailyTitleMobile {
+          display: none;
+        }
+
+        @media (max-width: 430px) {
+          .page {
+            padding: 10px 8px 32px;
+          }
+
+          .paper {
+            padding: 29px 14px 30px;
+            border-radius: 27px;
+          }
+
+          .paper .header h1 {
+            font-size: 28px;
+            line-height: 1.42;
+          }
+
+          .lead {
+            font-size: 13px;
+            line-height: 1.9;
+          }
+
+          .themeSection,
+          .cardSection {
+            padding: 19px 14px;
+            border-radius: 24px;
+          }
+
+          .sectionHeading {
+            gap: 11px;
+          }
+
+          .sectionHeading h2 {
+            font-size: 19px;
+          }
+
+          .roundIcon {
+            width: 52px;
+            height: 52px;
+          }
+
+          .themeChoice,
+          .actionButton {
+            padding-left: 14px;
+            padding-right: 14px;
+          }
+
+          .actionText strong {
+            font-size: 14px;
+          }
+        }
+
+
+
+        /* DAILY JAPANESE WRAP FINAL */
+
+        .sectionHeading h2 .dailyNoBreak {
+          display: inline-block;
+          white-space: nowrap !important;
+          word-break: keep-all;
+        }
+
+        .themeChoice .choiceText strong,
+        .actionButton .actionText strong {
+          word-break: keep-all;
+          overflow-wrap: normal;
+        }
+
+        .themeChoice .choiceText strong {
+          white-space: nowrap;
+          font-size: 14px;
+        }
+
+        .sectionDescription,
+        .lead,
+        .choiceText small,
+        .actionText small {
+          word-break: keep-all;
+          overflow-wrap: normal;
+        }
+
+        @media (max-width: 430px) {
+          .sectionHeading h2 {
+            font-size: 18px;
+          }
+
+          .themeChoice .choiceText strong {
+            font-size: 13.5px;
+          }
+        }
+
+`}</style>
     </main>
   );
 }

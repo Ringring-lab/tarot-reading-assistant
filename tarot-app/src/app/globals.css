@@ -24,3 +24,124 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+/* === TAROT BRAND SYSTEM V1 === */
+
+:root {
+  --tarot-ivory: #fbf8f1;
+  --tarot-paper: rgba(255, 253, 248, 0.88);
+
+  --tarot-coral: #dfa49c;
+  --tarot-coral-soft: #f3d8d3;
+
+  --tarot-yellow: #ead995;
+  --tarot-yellow-soft: #f7efc9;
+
+  --tarot-mint: #cfe3d9;
+  --tarot-blue: #dbe7e6;
+
+  --tarot-gold: #b8a26d;
+
+  --tarot-text: #454543;
+  --tarot-text-soft: #77736d;
+
+  --tarot-line: rgba(174, 157, 119, 0.25);
+
+  --tarot-radius-lg: 28px;
+  --tarot-radius-md: 20px;
+
+  --tarot-shadow:
+    0 18px 45px rgba(104, 92, 73, 0.07);
+}
+
+html {
+  background: var(--tarot-ivory);
+}
+
+body {
+  min-height: 100vh;
+  color: var(--tarot-text);
+
+  background:
+    radial-gradient(
+      circle at 8% 4%,
+      rgba(234, 217, 149, 0.18),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 94% 10%,
+      rgba(223, 164, 156, 0.15),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 12% 92%,
+      rgba(207, 227, 217, 0.18),
+      transparent 28%
+    ),
+    var(--tarot-ivory);
+}
+
+/*
+  日本語のブランド見出し。
+  個別ページで別フォントを指定しない限り、
+  全ページで同じZen Maru Gothicになる。
+*/
+h1,
+h2,
+h3 {
+  font-family: var(--font-zen-maru), system-ui, sans-serif;
+  color: var(--tarot-text);
+}
+
+/* 本文は読みやすさ優先 */
+p,
+li,
+label,
+input,
+textarea,
+select,
+button {
+  font-family:
+    var(--font-geist-sans),
+    -apple-system,
+    BlinkMacSystemFont,
+    "Hiragino Sans",
+    "Yu Gothic",
+    "Meiryo",
+    sans-serif;
+}
+
+/* 入力UIも同じ生活アプリ感へ */
+input,
+textarea,
+select {
+  color: var(--tarot-text);
+  background: rgba(255, 255, 255, 0.72);
+  border-color: var(--tarot-line);
+  border-radius: 16px;
+}
+
+/* 操作時の色もブランド側へ */
+button,
+a,
+input,
+textarea,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid rgba(223, 164, 156, 0.55);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--tarot-coral-soft);
+  color: var(--tarot-text);
+}
+

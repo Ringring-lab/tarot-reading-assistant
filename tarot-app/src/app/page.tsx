@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { Klee_One } from "next/font/google";
+import { Zen_Maru_Gothic } from "next/font/google";
 
-const kleeOne = Klee_One({
-  weight: ["400", "600"],
+const zenMaru = Zen_Maru_Gothic({
+  weight: ["400", "500", "700"],
   display: "swap",
   preload: false,
 });
@@ -129,7 +129,7 @@ export default function Home() {
           <div className="homeV2-brandPill">Tarot Reading Assistant</div>
           <p className="homeV2-eyebrow">YOUR CARDS, YOUR INTUITION</p>
 
-          <h1 className={`${kleeOne.className} homeV2-title`}>
+          <h1 className={`${zenMaru.className} homeV2-title`}>
             お気に入りの
             <br />
             タロットカードを、
@@ -137,8 +137,9 @@ export default function Home() {
             <span>毎日のバイブルに。</span>
           </h1>
 
-          <p className={`${kleeOne.className} homeV2-subtitle`}>
-            あなたが引いたカードを、一緒に読み解く。
+          <p className={`${zenMaru.className} homeV2-subtitle`}>
+            <span>あなたが引いたカードを、</span>
+            <span>一緒に読み解く。</span>
           </p>
         </section>
 
@@ -165,14 +166,14 @@ export default function Home() {
         </section>
 
         <section className="homeV2-firstGuide">
-          <div className="homeV2-guide">
+          <Link href="/guide" className="homeV2-guide">
             <span className="homeV2-guideSpark">♡</span>
             <span className="homeV2-guideCopy">
               <strong>初めての方へ</strong>
               <small>このサイトの楽しみ方を見る</small>
             </span>
-            <span className="homeV2-soon">準備中</span>
-          </div>
+            <span className="homeV2-arrow">›</span>
+          </Link>
         </section>
 
         <section className="homeV2-comingWrap">
@@ -2391,6 +2392,49 @@ export default function Home() {
 
         .homeV2-rightMiniBloom {
           opacity: .80;
+        }
+
+
+
+        /* GUIDE LINK */
+        a.homeV2-guide {
+          text-decoration: none;
+          color: inherit;
+        }
+
+
+
+        /* HOME TITLE TYPOGRAPHY FIX */
+
+        /* 可愛さは残しつつ、トップタイトルだけ少し細く */
+        .homeV2-title {
+          font-weight: 500;
+          letter-spacing: -0.015em;
+        }
+
+        /* サブタイトルは意味のまとまりで改行 */
+        .homeV2-subtitle {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          line-height: 1.55;
+          word-break: keep-all;
+        }
+
+        .homeV2-subtitle span {
+          display: block;
+          white-space: nowrap;
+        }
+
+        @media (max-width: 430px) {
+          .homeV2-title {
+            font-size: 26px;
+            line-height: 1.34;
+          }
+
+          .homeV2-subtitle {
+            font-size: 12.5px;
+          }
         }
 
 `}</style>
