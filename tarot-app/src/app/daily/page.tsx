@@ -1558,6 +1558,63 @@ export default function DailyPage() {
           }
         }
 
+
+
+        /* DAILY SPARKLE POLISH */
+
+        .header {
+          position: relative;
+        }
+
+        .header::before,
+        .header::after {
+          position: absolute;
+          pointer-events: none;
+          line-height: 1;
+          z-index: 2;
+        }
+
+        .header::before {
+          content: "✦";
+          top: 46px;
+          left: 12%;
+          color: rgba(184, 162, 109, 0.55);
+          font-size: 16px;
+          transform: rotate(8deg);
+        }
+
+        .header::after {
+          content: "✧";
+          top: 88px;
+          right: 11%;
+          color: rgba(223, 164, 156, 0.60);
+          font-size: 19px;
+          transform: rotate(-8deg);
+        }
+
+        .eyebrow {
+          position: relative;
+        }
+
+        .eyebrow::before,
+        .eyebrow::after {
+          content: "✦";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          color: rgba(184, 162, 109, 0.42);
+        }
+
+        .eyebrow::before {
+          left: -24px;
+          font-size: 8px;
+        }
+
+        .eyebrow::after {
+          right: -24px;
+          font-size: 6px;
+        }
+
 `}</style>
     </main>
   );
