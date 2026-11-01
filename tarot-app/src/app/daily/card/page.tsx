@@ -129,13 +129,14 @@ export default function CardPage() {
   };
 
   return (
-    <main className="page">
+    <main className="page" data-page="card">
       <div className="stainedFrame">
         <div className="paper">
           <header className="header">
             <div className="sunMark">☀</div>
             <p className="eyebrow">YOUR CARD</p>
-            <h1>引いたカードを選ぶ</h1>
+            <h1><span className="cardPhraseLine">引いたカードを</span>
+<span className="cardPhraseLine">選ぶ</span></h1>
             <p>
               まずカードの種類を選んでください。
               <br />
@@ -145,7 +146,16 @@ export default function CardPage() {
 
           <section className="themeBar">
             <span>今日のテーマ</span>
-            <strong>{theme}</strong>
+            <strong>
+              {theme === DEFAULT_THEME ? (
+                <>
+                  <span className="cardThemeLine">今日の私に必要な</span>
+                  <span className="cardThemeLine">メッセージ</span>
+                </>
+              ) : (
+                theme
+              )}
+            </strong>
 
             <button
               type="button"
@@ -275,7 +285,10 @@ export default function CardPage() {
                 >
                   <span>☀</span>
                   <strong>正位置</strong>
-                  <small>この向きで読み解く</small>
+                  <small><span className="orientationTwoLines">
+      <span>この向きで</span>
+      <span>読み解く</span>
+    </span></small>
                 </button>
 
                 <button
@@ -285,7 +298,10 @@ export default function CardPage() {
                 >
                   <span>☾</span>
                   <strong>逆位置</strong>
-                  <small>この向きで読み解く</small>
+                  <small><span className="orientationTwoLines">
+      <span>この向きで</span>
+      <span>読み解く</span>
+    </span></small>
                 </button>
               </div>
             </section>
@@ -300,7 +316,7 @@ export default function CardPage() {
 
         body {
           margin: 0;
-          background: #f8fbfc;
+          background: #fffdf9;
         }
 
         button {
@@ -310,7 +326,7 @@ export default function CardPage() {
         .page {
           min-height: 100vh;
           padding: 18px 10px 40px;
-          color: #17243a;
+          color: #4d4a52;
           font-family:
             -apple-system,
             BlinkMacSystemFont,
@@ -327,22 +343,22 @@ export default function CardPage() {
           background:
             linear-gradient(
               135deg,
-              #61ccef 0%,
-              #61ccef 12%,
-              #ffd94c 12%,
-              #ffd94c 23%,
-              #ff725f 23%,
-              #ff725f 34%,
-              #65cfae 34%,
-              #65cfae 44%,
-              #61ccef 44%,
-              #61ccef 58%,
-              #ffd94c 58%,
-              #ffd94c 69%,
-              #ff725f 69%,
-              #ff725f 81%,
-              #61ccef 81%,
-              #61ccef 100%
+              #71c4dc 0%,
+              #71c4dc 12%,
+              #f5d977 12%,
+              #f5d977 23%,
+              #f4a08f 23%,
+              #f4a08f 34%,
+              #a9d8cb 34%,
+              #a9d8cb 44%,
+              #71c4dc 44%,
+              #71c4dc 58%,
+              #f5d977 58%,
+              #f5d977 69%,
+              #f4a08f 69%,
+              #f4a08f 81%,
+              #71c4dc 81%,
+              #71c4dc 100%
             );
           box-shadow: 0 18px 45px rgba(28, 75, 108, 0.12);
         }
@@ -351,9 +367,9 @@ export default function CardPage() {
           position: relative;
           overflow: hidden;
           padding: 30px 18px 36px;
-          border: 1px solid #e8c96c;
+          border: 1px solid #d8b46f;
           border-radius: 26px;
-          background: #fffefb;
+          background: #fffdf9;
         }
 
         .paper::before,
@@ -374,10 +390,10 @@ export default function CardPage() {
           background:
             linear-gradient(
               135deg,
-              #65cef2 0 30%,
-              #ffd850 30% 48%,
-              #ff7560 48% 68%,
-              #6ad3b1 68%
+              #71c4dc 0 30%,
+              #f5d977 30% 48%,
+              #f4a08f 48% 68%,
+              #a9d8cb 68%
             );
         }
 
@@ -388,10 +404,10 @@ export default function CardPage() {
           background:
             linear-gradient(
               315deg,
-              #65cef2 0 30%,
-              #ffd850 30% 48%,
-              #ff7560 48% 68%,
-              #6ad3b1 68%
+              #71c4dc 0 30%,
+              #f5d977 30% 48%,
+              #f4a08f 48% 68%,
+              #a9d8cb 68%
             );
         }
 
@@ -410,13 +426,13 @@ export default function CardPage() {
         }
 
         .sunMark {
-          color: #dfa921;
+          color: #d8a23a;
           font-size: 31px;
         }
 
         .eyebrow {
           margin: 3px 0 6px;
-          color: #b98220;
+          color: #d8a23a;
           font-size: 11px;
           font-weight: 900;
           letter-spacing: 0.18em;
@@ -445,9 +461,9 @@ export default function CardPage() {
           gap: 4px 12px;
           margin-bottom: 18px;
           padding: 14px 16px;
-          border: 1px dashed #e3c872;
+          border: 1px dashed #d8b46f;
           border-radius: 17px;
-          background: #fffdf5;
+          background: #fffdf9;
         }
 
         .themeBar span {
@@ -475,8 +491,8 @@ export default function CardPage() {
           padding: 7px 10px;
           border: 0;
           border-radius: 999px;
-          background: #eef9fc;
-          color: #2b99b8;
+          background: #fffdf9;
+          color: #569aad;
           font-size: 11px;
           font-weight: 800;
           cursor: pointer;
@@ -516,7 +532,7 @@ export default function CardPage() {
           border: 1px solid #e1e7ea;
           border-radius: 16px;
           background: #fff;
-          color: #17243a;
+          color: #4d4a52;
           text-align: center;
           cursor: pointer;
           transition: 0.15s ease;
@@ -527,8 +543,8 @@ export default function CardPage() {
         }
 
         .categoryButton.selected {
-          border-color: #59bee1;
-          background: #f0fbff;
+          border-color: #71c4dc;
+          background: #fffdf9;
           box-shadow: 0 6px 15px rgba(74, 187, 225, 0.12);
         }
 
@@ -538,8 +554,8 @@ export default function CardPage() {
           height: 38px;
           place-items: center;
           border-radius: 50%;
-          background: #fff3c8;
-          color: #bd8616;
+          background: #f8e8b6;
+          color: #d8a23a;
           font-size: 20px;
         }
 
@@ -567,8 +583,8 @@ export default function CardPage() {
           height: 48px;
           place-items: center;
           border-radius: 50%;
-          background: #fff0bd;
-          color: #bb8313;
+          background: #f8e8b6;
+          color: #d8a23a;
           font-size: 22px;
         }
 
@@ -610,18 +626,18 @@ export default function CardPage() {
           border: 1px solid #dde5e9;
           border-radius: 13px;
           background: #fbfdfe;
-          color: #17243a;
+          color: #4d4a52;
           cursor: pointer;
         }
 
         .cardButton:hover {
-          border-color: #66c7e8;
-          background: #f5fcff;
+          border-color: #71c4dc;
+          background: #fffdf9;
         }
 
         .cardButton.selectedCard {
-          border-color: #ff826f;
-          background: #fff3f0;
+          border-color: #f4a08f;
+          background: #f6b7b2;
           box-shadow: 0 4px 11px rgba(255, 114, 95, 0.1);
         }
 
@@ -631,7 +647,7 @@ export default function CardPage() {
         }
 
         .tinySuit {
-          color: #bd8616;
+          color: #d8a23a;
           font-size: 14px;
         }
 
@@ -642,7 +658,7 @@ export default function CardPage() {
           margin-bottom: 15px;
           padding: 13px 15px;
           border-radius: 15px;
-          background: #fffaf0;
+          background: #fffaf3;
         }
 
         .chosenCard > span {
@@ -685,8 +701,25 @@ export default function CardPage() {
           cursor: pointer;
         }
 
-        .orientationButtons span {
+        .orientationButtons > button > span {
           font-size: 25px;
+        }
+
+        .orientationTwoLines {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1px;
+          font-size: 10px;
+          line-height: 1.35;
+          font-weight: 400;
+        }
+
+        .orientationTwoLines > span {
+          display: block;
+          white-space: nowrap;
+          font-size: 10px;
+          line-height: 1.35;
         }
 
         .orientationButtons strong {
@@ -699,15 +732,15 @@ export default function CardPage() {
         }
 
         .upright {
-          border-color: #ecd58c;
-          background: #fffaf0;
+          border-color: #f8e8b6;
+          background: #fffaf3;
           color: #9f741b;
         }
 
         .reversed {
-          border-color: #cfdfed;
-          background: #f4f9fd;
-          color: #467b9d;
+          border-color: #dceff7;
+          background: #fffdf9;
+          color: #569aad;
         }
 
         @media (max-width: 620px) {

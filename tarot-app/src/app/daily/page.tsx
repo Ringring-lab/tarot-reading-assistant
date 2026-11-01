@@ -161,6 +161,20 @@ export default function DailyPage() {
     <main className="page">
       <div className="stainedFrame">
         <div className="paper">
+          {/* BRAND ORNAMENT TRANSPLANT V1 */}
+          <div className="brandOrnamentLayer" aria-hidden="true">
+            <span className="brandOval brandOvalA" />
+            <span className="brandOval brandOvalB" />
+            <span className="brandOval brandOvalC" />
+            <span className="brandOval brandOvalD" />
+
+            <span className="brandGoldLine brandGoldLineA" />
+            <span className="brandGoldLine brandGoldLineB" />
+
+            <span className="brandSpark brandSparkA">✦</span>
+            <span className="brandSpark brandSparkB">✧</span>
+            <span className="brandSpark brandSparkC">✦</span>
+          </div>
           <header className="header">
             <div className="sunMark">☀</div>
 
@@ -554,7 +568,7 @@ export default function DailyPage() {
 
         body {
           margin: 0;
-          background: #f8fbfc;
+          background: #fffdf9;
         }
 
         button,
@@ -566,7 +580,7 @@ export default function DailyPage() {
         .page {
           min-height: 100vh;
           padding: 18px 10px 40px;
-          color: #17243a;
+          color: #4d4a52;
           font-family:
             -apple-system,
             BlinkMacSystemFont,
@@ -583,22 +597,22 @@ export default function DailyPage() {
           background:
             linear-gradient(
               135deg,
-              #61ccef 0%,
-              #61ccef 12%,
-              #ffd94c 12%,
-              #ffd94c 23%,
-              #ff725f 23%,
-              #ff725f 34%,
-              #65cfae 34%,
-              #65cfae 44%,
-              #61ccef 44%,
-              #61ccef 58%,
-              #ffd94c 58%,
-              #ffd94c 69%,
-              #ff725f 69%,
-              #ff725f 81%,
-              #61ccef 81%,
-              #61ccef 100%
+              #71c4dc 0%,
+              #71c4dc 12%,
+              #f5d977 12%,
+              #f5d977 23%,
+              #f4a08f 23%,
+              #f4a08f 34%,
+              #a9d8cb 34%,
+              #a9d8cb 44%,
+              #71c4dc 44%,
+              #71c4dc 58%,
+              #f5d977 58%,
+              #f5d977 69%,
+              #f4a08f 69%,
+              #f4a08f 81%,
+              #71c4dc 81%,
+              #71c4dc 100%
             );
         }
 
@@ -606,9 +620,9 @@ export default function DailyPage() {
           position: relative;
           overflow: hidden;
           padding: 30px 18px 36px;
-          border: 1px solid #e8c96c;
+          border: 1px solid #d8b46f;
           border-radius: 26px;
-          background: #fffefb;
+          background: #fffdf9;
         }
 
         .header {
@@ -617,13 +631,13 @@ export default function DailyPage() {
         }
 
         .sunMark {
-          color: #dda923;
+          color: #d8a23a;
           font-size: 32px;
         }
 
         .eyebrow,
         .miniLabel {
-          color: #b98220;
+          color: #d8a23a;
           font-size: 11px;
           font-weight: 900;
           letter-spacing: 0.16em;
@@ -655,7 +669,7 @@ export default function DailyPage() {
         .cardSection {
           margin-bottom: 18px;
           padding: 20px;
-          border: 1px solid #eadcae;
+          border: 1px solid #f8e8b6;
           border-radius: 24px;
         }
 
@@ -664,7 +678,7 @@ export default function DailyPage() {
         }
 
         .cardSection {
-          background: #fbfeff;
+          background: #fffdf9;
         }
 
         .sectionHeading {
@@ -688,13 +702,13 @@ export default function DailyPage() {
         }
 
         .themeIcon {
-          background: #fff0bd;
-          color: #cb9319;
+          background: #f8e8b6;
+          color: #d8a23a;
         }
 
         .cardIcon {
-          background: #dff4f8;
-          color: #309ebd;
+          background: #dceff7;
+          color: #569aad;
         }
 
         .sectionHeading h2 {
@@ -724,18 +738,18 @@ export default function DailyPage() {
           border: 1px solid #dde5e9;
           border-radius: 18px;
           background: #fff;
-          color: #17243a;
+          color: #4d4a52;
           text-align: left;
           cursor: pointer;
         }
 
         .themeChoice.selected {
-          border-color: #58bfe4;
-          background: #f5fcff;
+          border-color: #71c4dc;
+          background: #fffdf9;
         }
 
         .radio {
-          color: #42afd4;
+          color: #71c4dc;
           font-size: 21px;
         }
 
@@ -756,7 +770,7 @@ export default function DailyPage() {
         .defaultBadge {
           padding: 5px 9px;
           border-radius: 999px;
-          background: #fff1bd;
+          background: #f8e8b6;
           color: #a9710a;
           font-size: 10px;
           font-weight: 800;
@@ -765,9 +779,9 @@ export default function DailyPage() {
         .customThemeBox {
           margin-top: 13px;
           padding: 16px;
-          border: 1px solid #d9e8ed;
+          border: 1px solid #dceff7;
           border-radius: 18px;
-          background: #fbfeff;
+          background: #fffdf9;
         }
 
         .customThemeBox label {
@@ -795,9 +809,9 @@ export default function DailyPage() {
         .examples button {
           margin: 0 6px 7px 0;
           padding: 8px 11px;
-          border: 1px solid #eadfbf;
+          border: 1px solid #f8e8b6;
           border-radius: 999px;
-          background: #fffaf0;
+          background: #fffaf3;
           font-size: 11px;
           cursor: pointer;
         }
@@ -819,7 +833,7 @@ export default function DailyPage() {
           padding: 13px 16px;
           border: 1px solid;
           border-radius: 18px;
-          color: #17243a;
+          color: #4d4a52;
           text-align: left;
           cursor: pointer;
         }
@@ -829,18 +843,18 @@ export default function DailyPage() {
         }
 
         .manualAction {
-          border-color: #f0d0ca;
+          border-color: #f6b7b2;
           background: #fff8f6;
         }
 
         .galleryAction {
-          border-color: #cde8ef;
-          background: #f5fcff;
+          border-color: #dceff7;
+          background: #fffdf9;
         }
 
         .cameraAction {
-          border-color: #eddda3;
-          background: #fffaf0;
+          border-color: #f8e8b6;
+          background: #fffaf3;
         }
 
         .actionIcon {
@@ -849,17 +863,17 @@ export default function DailyPage() {
         }
 
         .manualIcon {
-          background: #ffe1da;
-          color: #de644f;
+          background: #f6b7b2;
+          color: #c97980;
         }
 
         .galleryIcon {
-          background: #dff4f8;
-          color: #2c9aba;
+          background: #dceff7;
+          color: #569aad;
         }
 
         .cameraIcon {
-          background: #fff0bd;
+          background: #f8e8b6;
           color: #b97e0f;
         }
 
@@ -885,7 +899,7 @@ export default function DailyPage() {
         .previewBox {
           margin-top: 18px;
           padding: 16px;
-          border: 1px solid #d8e9ee;
+          border: 1px solid #dceff7;
           border-radius: 20px;
           background: white;
         }
@@ -941,8 +955,8 @@ export default function DailyPage() {
           margin: 3px 0 8px;
           padding: 4px 9px;
           border-radius: 999px;
-          background: #fff0ed;
-          color: #df604f;
+          background: #f6b7b2;
+          color: #c97980;
           font-size: 11px;
           font-weight: 800;
         }
@@ -970,7 +984,7 @@ export default function DailyPage() {
         .manualFallback {
           border: 0;
           border-radius: 999px;
-          background: #49b9df;
+          background: #71c4dc;
           color: white;
           font-weight: 900;
           cursor: pointer;
@@ -1023,18 +1037,18 @@ export default function DailyPage() {
           width: 7px;
           height: 7px;
           border-radius: 50%;
-          background: #5fc9ef;
+          background: #71c4dc;
           animation:
             bounce 1.2s infinite;
         }
 
         .dots span:nth-child(2) {
-          background: #ffd54a;
+          background: #f5d977;
           animation-delay: 0.15s;
         }
 
         .dots span:nth-child(3) {
-          background: #ff725f;
+          background: #f4a08f;
           animation-delay: 0.3s;
         }
 
@@ -1708,6 +1722,307 @@ export default function DailyPage() {
         .exampleLine {
           text-align: center;
           line-height: 1.45;
+        }
+
+
+
+        /* DAILY GLAM POLISH V1 */
+
+        /* トップと同じ、少し華やかな入口感 */
+        .paper::before {
+          width: 205px !important;
+          height: 170px !important;
+          top: -52px !important;
+          left: -54px !important;
+          opacity: 0.92 !important;
+
+          background:
+            radial-gradient(
+              ellipse at 25% 38%,
+              rgba(234, 217, 149, .72) 0 20%,
+              transparent 21%
+            ),
+            radial-gradient(
+              ellipse at 52% 28%,
+              rgba(207, 227, 217, .78) 0 19%,
+              transparent 20%
+            ),
+            radial-gradient(
+              ellipse at 28% 70%,
+              rgba(223, 164, 156, .68) 0 21%,
+              transparent 22%
+            ),
+            radial-gradient(
+              ellipse at 70% 62%,
+              rgba(219, 231, 230, .82) 0 19%,
+              transparent 20%
+            ) !important;
+
+          transform: rotate(-8deg) !important;
+        }
+
+        .paper::after {
+          width: 195px !important;
+          height: 160px !important;
+          top: -55px !important;
+          right: -58px !important;
+          opacity: 0.88 !important;
+
+          background:
+            radial-gradient(
+              ellipse at 35% 30%,
+              rgba(223, 164, 156, .66) 0 20%,
+              transparent 21%
+            ),
+            radial-gradient(
+              ellipse at 68% 32%,
+              rgba(234, 217, 149, .72) 0 19%,
+              transparent 20%
+            ),
+            radial-gradient(
+              ellipse at 38% 70%,
+              rgba(207, 227, 217, .76) 0 20%,
+              transparent 21%
+            ),
+            radial-gradient(
+              ellipse at 75% 67%,
+              rgba(219, 231, 230, .74) 0 17%,
+              transparent 18%
+            ) !important;
+
+          transform: rotate(12deg) !important;
+        }
+
+        /* 薄いゴールドラインでステンドグラス感 */
+        .header {
+          position: relative;
+        }
+
+        .header h1::after {
+          content: "";
+          display: block;
+          width: 76px;
+          height: 1px;
+          margin: 13px auto 0;
+
+          background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(184,162,109,.72),
+            transparent
+          );
+        }
+
+        /* Dailyのキラキラを少し増やす */
+        .header::before {
+          content: "✦";
+          top: 55px;
+          left: 11%;
+          color: rgba(184,162,109,.72);
+          font-size: 15px;
+        }
+
+        .header::after {
+          content: "✧";
+          top: 114px;
+          right: 10%;
+          color: rgba(223,164,156,.74);
+          font-size: 21px;
+        }
+
+        .paper {
+          background:
+            radial-gradient(
+              circle at 50% 3%,
+              rgba(255,255,255,.92),
+              transparent 34%
+            ),
+            rgba(255,253,248,.94) !important;
+        }
+
+
+
+
+        /* ==========================================
+           BRAND ORNAMENT TRANSPLANT V1
+           TOPの装飾DNAをDailyへ移植
+        ========================================== */
+
+        .paper {
+          isolation: isolate;
+        }
+
+        .brandOrnamentLayer {
+          position: absolute !important;
+          inset: 0;
+          z-index: 0 !important;
+          overflow: hidden;
+          pointer-events: none;
+          border-radius: inherit;
+        }
+
+        /*
+          TOPと同じ
+          ・淡い楕円
+          ・細いゴールドふち
+          ・半透明
+        */
+        .brandOval {
+          position: absolute;
+          display: block;
+          border: 1px solid rgba(216, 180, 111, 0.58);
+          border-radius: 999px;
+          opacity: 0.78;
+        }
+
+        /* 左上：バターイエロー */
+        .brandOvalA {
+          width: 94px;
+          height: 38px;
+          top: 21px;
+          left: -27px;
+          background: rgba(245, 217, 119, 0.38);
+          transform: rotate(-31deg);
+        }
+
+        /* 左上：ミント */
+        .brandOvalB {
+          width: 78px;
+          height: 34px;
+          top: 58px;
+          left: -18px;
+          background: rgba(169, 216, 203, 0.35);
+          transform: rotate(27deg);
+        }
+
+        /* 右上：コーラル */
+        .brandOvalC {
+          width: 90px;
+          height: 36px;
+          top: 24px;
+          right: -25px;
+          background: rgba(244, 160, 143, 0.32);
+          transform: rotate(-25deg);
+        }
+
+        /* 右上：淡ブルー */
+        .brandOvalD {
+          width: 72px;
+          height: 31px;
+          top: 66px;
+          right: -12px;
+          background: rgba(220, 239, 247, 0.58);
+          transform: rotate(31deg);
+        }
+
+        /*
+          TOPで効いている
+          “細い金の曲線”
+        */
+        .brandGoldLine {
+          position: absolute;
+          display: block;
+          border: 1px solid rgba(216, 180, 111, 0.43);
+          border-radius: 50%;
+          background: transparent;
+        }
+
+        .brandGoldLineA {
+          width: 190px;
+          height: 112px;
+          top: -32px;
+          left: -73px;
+          transform: rotate(18deg);
+        }
+
+        .brandGoldLineB {
+          width: 180px;
+          height: 105px;
+          top: -20px;
+          right: -76px;
+          transform: rotate(-20deg);
+        }
+
+        /*
+          TOPと同じ小さなキラキラ。
+          タイトル本文には被せない。
+        */
+        .brandSpark {
+          position: absolute;
+          display: block;
+          line-height: 1;
+        }
+
+        .brandSparkA {
+          top: 101px;
+          left: 13%;
+          color: rgba(216, 162, 58, 0.72);
+          font-size: 12px;
+        }
+
+        .brandSparkB {
+          top: 128px;
+          right: 12%;
+          color: rgba(198, 95, 115, 0.56);
+          font-size: 17px;
+        }
+
+        .brandSparkC {
+          top: 52px;
+          right: 29%;
+          color: rgba(216, 180, 111, 0.62);
+          font-size: 8px;
+        }
+
+        /*
+          中身は装飾より必ず前面。
+          装飾が文字を邪魔しない。
+        */
+        .paper > :not(.brandOrnamentLayer) {
+          position: relative;
+          z-index: 2;
+        }
+
+        /*
+          TOPと同じ透明感を少し強化
+        */
+        .themeSection,
+        .cardSection {
+          border-color: rgba(216, 180, 111, 0.34) !important;
+          background:
+            linear-gradient(
+              145deg,
+              rgba(255, 253, 249, 0.82),
+              rgba(255, 250, 243, 0.64)
+            ) !important;
+        }
+
+        .themeChoice.selected {
+          border-color: rgba(216, 180, 111, 0.56) !important;
+          background:
+            linear-gradient(
+              135deg,
+              rgba(248, 232, 182, 0.82),
+              rgba(255, 253, 249, 0.90)
+            ) !important;
+        }
+
+        @media (max-width: 430px) {
+          .brandOvalA {
+            left: -34px;
+          }
+
+          .brandOvalC {
+            right: -34px;
+          }
+
+          .brandGoldLineA {
+            left: -92px;
+          }
+
+          .brandGoldLineB {
+            right: -92px;
+          }
         }
 
 `}</style>

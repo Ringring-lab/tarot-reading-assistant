@@ -531,7 +531,7 @@ export default function ResultPage() {
 
         body {
           margin: 0;
-          background: #f8fbfc;
+          background: #fffdf9;
         }
 
         button {
@@ -541,7 +541,7 @@ export default function ResultPage() {
         .page {
           min-height: 100vh;
           padding: 18px 10px 40px;
-          color: #17243a;
+          color: #4d4a52;
           font-family:
             -apple-system,
             BlinkMacSystemFont,
@@ -558,22 +558,22 @@ export default function ResultPage() {
           background:
             linear-gradient(
               135deg,
-              #61ccef 0%,
-              #61ccef 12%,
-              #ffd94c 12%,
-              #ffd94c 23%,
-              #ff725f 23%,
-              #ff725f 34%,
-              #65cfae 34%,
-              #65cfae 44%,
-              #61ccef 44%,
-              #61ccef 58%,
-              #ffd94c 58%,
-              #ffd94c 69%,
-              #ff725f 69%,
-              #ff725f 81%,
-              #61ccef 81%,
-              #61ccef 100%
+              #71c4dc 0%,
+              #71c4dc 12%,
+              #f5d977 12%,
+              #f5d977 23%,
+              #f4a08f 23%,
+              #f4a08f 34%,
+              #a9d8cb 34%,
+              #a9d8cb 44%,
+              #71c4dc 44%,
+              #71c4dc 58%,
+              #f5d977 58%,
+              #f5d977 69%,
+              #f4a08f 69%,
+              #f4a08f 81%,
+              #71c4dc 81%,
+              #71c4dc 100%
             );
           box-shadow:
             0 18px 45px
@@ -585,9 +585,9 @@ export default function ResultPage() {
           overflow: hidden;
           min-height: 90vh;
           padding: 29px 18px 36px;
-          border: 1px solid #e8c96c;
+          border: 1px solid #d8b46f;
           border-radius: 26px;
-          background: #fffefb;
+          background: #fffdf9;
         }
 
         .paper::before,
@@ -609,10 +609,10 @@ export default function ResultPage() {
           background:
             linear-gradient(
               135deg,
-              #65cef2 0 30%,
-              #ffd850 30% 48%,
-              #ff7560 48% 68%,
-              #6ad3b1 68%
+              #71c4dc 0 30%,
+              #f5d977 30% 48%,
+              #f4a08f 48% 68%,
+              #a9d8cb 68%
             );
         }
 
@@ -624,10 +624,10 @@ export default function ResultPage() {
           background:
             linear-gradient(
               315deg,
-              #65cef2 0 30%,
-              #ffd850 30% 48%,
-              #ff7560 48% 68%,
-              #6ad3b1 68%
+              #71c4dc 0 30%,
+              #f5d977 30% 48%,
+              #f4a08f 48% 68%,
+              #a9d8cb 68%
             );
         }
 
@@ -647,13 +647,13 @@ export default function ResultPage() {
         }
 
         .sunMark {
-          color: #dda923;
+          color: #d8a23a;
           font-size: 31px;
         }
 
         .eyebrow {
           margin: 3px 0 6px;
-          color: #c58b1f;
+          color: #d8a23a;
           font-size: 11px;
           font-weight: 900;
           letter-spacing: 0.19em;
@@ -693,9 +693,9 @@ export default function ResultPage() {
           margin-bottom: 17px;
           padding: 13px 16px;
           border:
-            1px dashed #e2c76e;
+            1px dashed #d8b46f;
           border-radius: 17px;
-          background: #fffdf5;
+          background: #fffdf9;
           text-align: center;
         }
 
@@ -724,7 +724,7 @@ export default function ResultPage() {
           margin-bottom: 20px;
           padding: 18px;
           border:
-            1px solid #eadba7;
+            1px solid #f8e8b6;
           border-radius: 22px;
           background:
             linear-gradient(
@@ -761,7 +761,7 @@ export default function ResultPage() {
           border:
             2px solid #d7ac3c;
           border-radius: 10px;
-          background: #fff9dd;
+          background: #f8e8b6;
           box-shadow:
             0 9px 20px
             rgba(74, 63, 28, 0.12);
@@ -791,11 +791,11 @@ export default function ResultPage() {
           background:
             linear-gradient(
               135deg,
-              #65cef2 0 26%,
-              #ffd850 26% 46%,
-              #ff7560 46% 66%,
-              #6ad3b1 66% 82%,
-              #257ab8 82%
+              #71c4dc 0 26%,
+              #f5d977 26% 46%,
+              #f4a08f 46% 66%,
+              #a9d8cb 66% 82%,
+              #569aad 82%
             );
         }
 
@@ -828,7 +828,7 @@ export default function ResultPage() {
           top: 35%;
           right: 0;
           left: 0;
-          color: #cc9518;
+          color: #d8a23a;
           font-size: 37px;
         }
 
@@ -860,7 +860,7 @@ export default function ResultPage() {
           top: 70%;
           right: 0;
           left: 0;
-          color: #df6250;
+          color: #c97980;
           font-size: 10px;
           font-weight: 800;
         }
@@ -872,14 +872,14 @@ export default function ResultPage() {
           place-items: center;
           margin-bottom: 9px;
           border-radius: 50%;
-          background: #fff0bd;
-          color: #bd8515;
+          background: #f8e8b6;
+          color: #d8a23a;
           font-size: 23px;
         }
 
         .categoryName {
           margin: 0 0 4px;
-          color: #bd8417;
+          color: #d8a23a;
           font-size: 11px;
           font-weight: 900;
           letter-spacing: 0.08em;
@@ -905,8 +905,8 @@ export default function ResultPage() {
           margin-top: 10px;
           padding: 6px 11px;
           border-radius: 999px;
-          background: #fff0ed;
-          color: #df604f;
+          background: #f6b7b2;
+          color: #c97980;
           font-size: 11px;
           font-weight: 900;
         }
@@ -922,7 +922,7 @@ export default function ResultPage() {
           gap: 7px;
           align-items: center;
           margin-top: 14px;
-          color: #d6a01e;
+          color: #d8a23a;
           font-size: 18px;
         }
 
@@ -931,15 +931,15 @@ export default function ResultPage() {
           margin-top: 18px;
           padding: 38px 22px;
           border:
-            1px solid #dcebf2;
+            1px solid #dceff7;
           border-radius: 22px;
-          background: #f8fdff;
+          background: #fffdf9;
           text-align: center;
         }
 
         .loadingIcon,
         .errorIcon {
-          color: #e2a820;
+          color: #d8a23a;
           font-size: 35px;
         }
 
@@ -968,19 +968,19 @@ export default function ResultPage() {
           width: 8px;
           height: 8px;
           border-radius: 50%;
-          background: #5fc9ef;
+          background: #71c4dc;
           animation:
             bounce 1.2s
             infinite ease-in-out;
         }
 
         .dots span:nth-child(2) {
-          background: #ffd54a;
+          background: #f5d977;
           animation-delay: 0.15s;
         }
 
         .dots span:nth-child(3) {
-          background: #ff725f;
+          background: #f4a08f;
           animation-delay: 0.3s;
         }
 
@@ -1011,7 +1011,7 @@ export default function ResultPage() {
           padding: 14px 18px;
           border: 0;
           border-radius: 999px;
-          background: #48b8df;
+          background: #71c4dc;
           color: white;
           font-size: 14px;
           font-weight: 900;
@@ -1044,27 +1044,27 @@ export default function ResultPage() {
         }
 
         .readingCard.today {
-          border-color: #f4cbc5;
+          border-color: #f6b7b2;
           background: #fff8f6;
         }
 
         .readingCard.hint {
-          border-color: #cfe8ef;
-          background: #f4fcff;
+          border-color: #dceff7;
+          background: #fffdf9;
         }
 
         .readingCard.basic {
-          border-color: #f0dda8;
-          background: #fffaf0;
+          border-color: #f8e8b6;
+          background: #fffaf3;
         }
 
         .readingCard.why {
-          border-color: #d6eadf;
-          background: #f6fcf8;
+          border-color: #ddf3ea;
+          background: #ddf3ea;
         }
 
         .readingCard.fallback {
-          border-color: #dce8ed;
+          border-color: #dceff7;
           background: #fff;
         }
 
@@ -1078,28 +1078,28 @@ export default function ResultPage() {
         }
 
         .todayIcon {
-          background: #ffe0da;
-          color: #ef6b58;
+          background: #f6b7b2;
+          color: #f4a08f;
         }
 
         .hintIcon {
-          background: #dff4f8;
-          color: #39a9c9;
+          background: #dceff7;
+          color: #569aad;
         }
 
         .basicIcon {
-          background: #fff0bd;
-          color: #cf9418;
+          background: #f8e8b6;
+          color: #d8a23a;
         }
 
         .whyIcon {
-          background: #e0f3e8;
-          color: #499b6c;
+          background: #ddf3ea;
+          color: #79aa9d;
         }
 
         .fallbackIcon {
           background: #edf4f7;
-          color: #56889d;
+          color: #569aad;
         }
 
         .sectionContent h2 {
@@ -1114,7 +1114,7 @@ export default function ResultPage() {
 
         .sectionContent p {
           margin: 0;
-          color: #344054;
+          color: #4d4a52;
           font-size: 14px;
           line-height: 1.95;
           white-space: pre-line;
@@ -1124,7 +1124,7 @@ export default function ResultPage() {
           position: absolute;
           top: 11px;
           right: 13px;
-          color: #d6a01e;
+          color: #d8a23a;
           font-size: 16px;
         }
 
@@ -1144,7 +1144,7 @@ export default function ResultPage() {
           margin: 0 auto;
           padding: 14px 20px;
           border-radius: 999px;
-          background: #4abbe1;
+          background: #71c4dc;
           color: white;
           font-size: 14px;
           font-weight: 900;

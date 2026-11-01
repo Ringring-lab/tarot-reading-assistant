@@ -29,21 +29,21 @@ body {
 /* === TAROT BRAND SYSTEM V1 === */
 
 :root {
-  --tarot-ivory: #fbf8f1;
+  --tarot-ivory: #fffaf3;
   --tarot-paper: rgba(255, 253, 248, 0.88);
 
-  --tarot-coral: #dfa49c;
-  --tarot-coral-soft: #f3d8d3;
+  --tarot-coral: #f4a08f;
+  --tarot-coral-soft: #f6b7b2;
 
-  --tarot-yellow: #ead995;
-  --tarot-yellow-soft: #f7efc9;
+  --tarot-yellow: #f5d977;
+  --tarot-yellow-soft: #f8e8b6;
 
-  --tarot-mint: #cfe3d9;
-  --tarot-blue: #dbe7e6;
+  --tarot-mint: #a9d8cb;
+  --tarot-blue: #71c4dc;
 
-  --tarot-gold: #b8a26d;
+  --tarot-gold: #d8b46f;
 
-  --tarot-text: #454543;
+  --tarot-text: #4d4a52;
   --tarot-text-soft: #77736d;
 
   --tarot-line: rgba(174, 157, 119, 0.25);
@@ -196,5 +196,696 @@ button {
 .phraseLine {
   display: block;
   white-space: nowrap;
+}
+
+
+
+/* === DAILY CARD COLOR SYSTEM FINAL === */
+
+/* TOP実色をそのまま使用 */
+
+/* 今日のテーマ：バターイエロー */
+.themeChoice.selected {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(248, 232, 182, 0.96),
+      rgba(255, 250, 243, 0.88)
+    ) !important;
+  border: 1px solid rgba(216, 180, 111, 0.42) !important;
+}
+
+/* 未選択テーマ：アイボリー */
+.themeChoice:not(.selected) {
+  background: rgba(255, 253, 249, 0.84) !important;
+  border: 1px solid rgba(216, 180, 111, 0.22) !important;
+}
+
+/* 手入力：コーラル */
+.manualAction {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(246, 183, 178, 0.70),
+      rgba(255, 250, 243, 0.88)
+    ) !important;
+  border: 1px solid rgba(201, 121, 128, 0.30) !important;
+}
+
+/* 写真：ミント */
+.galleryAction {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(221, 243, 234, 0.92),
+      rgba(255, 253, 249, 0.88)
+    ) !important;
+  border: 1px solid rgba(169, 216, 203, 0.38) !important;
+}
+
+/* カメラ：バターイエロー */
+.cameraAction {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(248, 232, 182, 0.86),
+      rgba(255, 253, 249, 0.90)
+    ) !important;
+  border: 1px solid rgba(216, 180, 111, 0.36) !important;
+}
+
+/* 各大セクションはミルキー白＋金ふち */
+.themeSection,
+.cardSection {
+  background: rgba(255, 253, 249, 0.78) !important;
+  border: 1px solid rgba(216, 180, 111, 0.24) !important;
+}
+
+/* 角丸カード全体の質感をTOP寄りへ */
+.themeChoice,
+.actionButton {
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.32),
+    0 8px 20px rgba(216, 180, 111, 0.045) !important;
+}
+
+/* Result系で使う汎用カードも同じ質感へ */
+.resultCard,
+.infoCard,
+.messageCard,
+.hintCard,
+.basicCard,
+.reasonCard {
+  background: rgba(255, 253, 249, 0.84) !important;
+  border: 1px solid rgba(216, 180, 111, 0.24) !important;
+}
+
+/* ヒント：ミント */
+.hintCard {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(221, 243, 234, 0.92),
+      rgba(255, 253, 249, 0.86)
+    ) !important;
+}
+
+/* 基本：バターイエロー */
+.basicCard {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(248, 232, 182, 0.84),
+      rgba(255, 253, 249, 0.88)
+    ) !important;
+}
+
+/* なぜこう読むの？：淡ブルー */
+.reasonCard {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(220, 239, 247, 0.88),
+      rgba(255, 253, 249, 0.88)
+    ) !important;
+}
+
+
+/* === TOP CARD COLOR MATCH FINAL === */
+
+/* TOPと同じ「面で色を見せる」 */
+.themeChoice.selected {
+  background: rgba(245, 217, 119, 0.72) !important;
+  border-color: rgba(216, 180, 111, 0.28) !important;
+}
+
+.manualAction {
+  background: rgba(246, 183, 178, 0.62) !important;
+  border-color: rgba(201, 121, 128, 0.22) !important;
+}
+
+.galleryAction {
+  background: rgba(221, 243, 234, 0.88) !important;
+  border-color: rgba(169, 216, 203, 0.30) !important;
+}
+
+.cameraAction {
+  background: rgba(248, 232, 182, 0.82) !important;
+  border-color: rgba(216, 180, 111, 0.28) !important;
+}
+
+/* 丸アイコンはTOPのようにミルキーに */
+.themeIcon,
+.cardIcon,
+.manualIcon,
+.galleryIcon,
+.cameraIcon {
+  background: rgba(255, 253, 249, 0.66) !important;
+  border: 1px solid rgba(255,255,255,0.55) !important;
+}
+
+/* アイコン線だけ役割色 */
+.themeIcon,
+.cameraIcon {
+  color: #d8a23a !important;
+}
+
+.cardIcon,
+.galleryIcon {
+  color: #79aa9d !important;
+}
+
+.manualIcon {
+  color: #c97980 !important;
+}
+
+/* TOPと同じ、カード自体は影より色を主役に */
+.themeChoice,
+.actionButton {
+  box-shadow: none !important;
+}
+
+
+/* === TOP ORNAMENT TRANSPLANT V1 === */
+
+/*
+  TOPの装飾DNAをDaily系へ少量移植
+  - 金ふち楕円
+  - 細いゴールドライン
+  - 小さなキラキラ
+*/
+
+/* 紙面全体に、トップと同じ細い金の楕円線 */
+.page .paper {
+  background:
+    radial-gradient(
+      ellipse 86px 42px at 10% 7%,
+      transparent 0 96%,
+      rgba(216, 180, 111, 0.34) 97% 99%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 108px 50px at 92% 10%,
+      transparent 0 96%,
+      rgba(216, 180, 111, 0.28) 97% 99%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 122px 55px at 8% 82%,
+      transparent 0 97%,
+      rgba(216, 180, 111, 0.19) 98% 99%,
+      transparent 100%
+    ),
+    #fffdf9 !important;
+}
+
+/* ヘッダー下の繊細な金ライン */
+.page .header h1::after {
+  content: "";
+  display: block;
+  width: 88px;
+  height: 1px;
+  margin: 14px auto 0;
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(216, 180, 111, 0.22) 12%,
+      rgba(216, 180, 111, 0.70) 50%,
+      rgba(216, 180, 111, 0.22) 88%,
+      transparent 100%
+    );
+}
+
+/* セクション見出しにもごく薄いブランド装飾 */
+.page .sectionHeading {
+  position: relative;
+}
+
+.page .sectionHeading::after {
+  content: "✦";
+  position: absolute;
+  top: -7px;
+  right: 7px;
+  color: rgba(216, 180, 111, 0.60);
+  font-size: 10px;
+  line-height: 1;
+  pointer-events: none;
+}
+
+/* YOUR CARD側は少し色を変えて単調さを防ぐ */
+.page .cardSection .sectionHeading::after {
+  content: "✧";
+  color: rgba(201, 121, 128, 0.52);
+  font-size: 13px;
+}
+
+/* 大きなセクション枠にもトップと同じ薄い金線 */
+.page .themeSection,
+.page .cardSection,
+.page .resultCard,
+.page .messageCard,
+.page .hintCard,
+.page .basicCard,
+.page .reasonCard {
+  position: relative;
+  border-color: rgba(216, 180, 111, 0.30) !important;
+}
+
+/* カード右上に小さなキラキラ */
+.page .themeSection::after,
+.page .cardSection::after {
+  position: absolute;
+  pointer-events: none;
+  color: rgba(216, 180, 111, 0.42);
+  line-height: 1;
+}
+
+.page .themeSection::after {
+  content: "✦";
+  right: 18px;
+  bottom: 16px;
+  font-size: 7px;
+}
+
+.page .cardSection::after {
+  content: "✧";
+  left: 18px;
+  bottom: 15px;
+  font-size: 9px;
+}
+
+/* 文字の邪魔をしないため、モバイルではさらに控えめ */
+@media (max-width: 430px) {
+  .page .paper {
+    background:
+      radial-gradient(
+        ellipse 72px 34px at 8% 6%,
+        transparent 0 96%,
+        rgba(216, 180, 111, 0.28) 97% 99%,
+        transparent 100%
+      ),
+      radial-gradient(
+        ellipse 92px 42px at 94% 9%,
+        transparent 0 96%,
+        rgba(216, 180, 111, 0.24) 97% 99%,
+        transparent 100%
+      ),
+      #fffdf9 !important;
+  }
+
+  .page .sectionHeading::after {
+    right: 2px;
+  }
+}
+
+
+/* === DAILY HEADER DEPTH FINAL === */
+
+/* 上部装飾だけ少し存在感を戻す */
+.paper::before,
+.paper::after {
+  opacity: 0.96 !important;
+}
+
+/* ヘッダーの白飛びを少し抑える */
+.paper {
+  background:
+    radial-gradient(
+      circle at 50% 4%,
+      rgba(255,255,255,0.62),
+      transparent 32%
+    ),
+    rgba(255,253,249,0.96) !important;
+}
+
+/* ゴールドの細線をトップ寄りに */
+.header h1::after {
+  width: 86px !important;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(216,180,111,0.82),
+    transparent
+  ) !important;
+}
+
+/* キラキラも少しだけ見えるように */
+.header::before {
+  color: rgba(216,180,111,0.78) !important;
+}
+
+.header::after {
+  color: rgba(201,121,128,0.70) !important;
+}
+
+
+
+/* === CARD PAGE SEMANTIC WRAP FINAL === */
+
+.cardPhraseLine,
+.cardThemeLine {
+  display: block;
+  white-space: nowrap;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+.cardPhraseLine {
+  line-height: 1.42;
+}
+
+.cardThemeLine {
+  line-height: 1.5;
+}
+
+
+
+/* === ORIENTATION LABEL NO BREAK === */
+.orientationNoBreak {
+  display: inline-block;
+  white-space: nowrap;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+
+
+/* === CARD PAGE VISUAL MATCH FINAL === */
+
+/* 「この向きで読み解く」は説明文サイズのまま1行 */
+.cardPage .orientationNoBreak {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+}
+
+/* Dailyページと同じ装飾配置へ */
+.cardPage .paper::before {
+  width: 205px !important;
+  height: 170px !important;
+  top: -52px !important;
+  bottom: auto !important;
+  left: -54px !important;
+  right: auto !important;
+  opacity: 0.96 !important;
+  transform: rotate(-8deg) !important;
+}
+
+.cardPage .paper::after {
+  width: 195px !important;
+  height: 160px !important;
+  top: -55px !important;
+  bottom: auto !important;
+  right: -58px !important;
+  left: auto !important;
+  opacity: 0.96 !important;
+  transform: rotate(12deg) !important;
+}
+
+/* 装飾を本文より後ろへ */
+.cardPage .paper::before,
+.cardPage .paper::after {
+  pointer-events: none !important;
+  z-index: 0 !important;
+}
+
+.cardPage .header,
+.cardPage section {
+  position: relative;
+  z-index: 1;
+}
+
+/* Dailyと同じ金ライン・キラキラのトーン */
+.cardPage .header h1::after {
+  width: 86px !important;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(216,180,111,.82),
+    transparent
+  ) !important;
+}
+
+.cardPage .header::before {
+  color: rgba(216,180,111,.78) !important;
+}
+
+.cardPage .header::after {
+  color: rgba(201,121,128,.70) !important;
+}
+
+
+
+/* === ORIENTATION TWO LINES FINAL === */
+.orientationTwoLines {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  font-size: 12px !important;
+  line-height: 1.35 !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+}
+
+.orientationTwoLines > span {
+  display: block;
+  white-space: nowrap;
+}
+
+
+
+/* === ORIENTATION TEXT HARD FIX === */
+.orientationTextFix {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 1px !important;
+
+  font-size: 11px !important;
+  line-height: 1.35 !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+
+  width: 100% !important;
+}
+
+.orientationTextFix > span {
+  display: block !important;
+  white-space: nowrap !important;
+  font-size: 11px !important;
+  line-height: 1.35 !important;
+  font-weight: 400 !important;
+}
+
+
+
+/* === ORIENTATION TEXT HARD FIX === */
+.orientationTextFix {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 1px !important;
+
+  font-size: 11px !important;
+  line-height: 1.35 !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+
+  width: 100% !important;
+}
+
+.orientationTextFix > span {
+  display: block !important;
+  white-space: nowrap !important;
+  font-size: 11px !important;
+  line-height: 1.35 !important;
+  font-weight: 400 !important;
+}
+
+
+
+/* === CARD PAGE DAILY DECOR MATCH === */
+
+/* Dailyと同じ、上だけ華やか・本文は邪魔しない */
+[data-page="card"] .paper {
+  position: relative;
+  overflow: hidden;
+}
+
+/* 左上：淡い花びら・楕円レイヤー */
+[data-page="card"] .paper::before {
+  content: "";
+  position: absolute;
+  top: -70px;
+  left: -72px;
+  width: 250px;
+  height: 215px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: .92;
+  background:
+    radial-gradient(ellipse at 24% 28%,
+      rgba(245,217,119,.66) 0 18%,
+      transparent 19%),
+    radial-gradient(ellipse at 48% 25%,
+      rgba(169,216,203,.52) 0 19%,
+      transparent 20%),
+    radial-gradient(ellipse at 28% 61%,
+      rgba(246,183,178,.56) 0 22%,
+      transparent 23%),
+    radial-gradient(ellipse at 60% 58%,
+      rgba(220,239,247,.68) 0 21%,
+      transparent 22%);
+  transform: rotate(-8deg);
+}
+
+/* 右上：少し小さめ・非対称 */
+[data-page="card"] .paper::after {
+  content: "";
+  position: absolute;
+  top: -62px;
+  right: -70px;
+  width: 235px;
+  height: 205px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: .88;
+  background:
+    radial-gradient(ellipse at 73% 24%,
+      rgba(246,183,178,.54) 0 18%,
+      transparent 19%),
+    radial-gradient(ellipse at 47% 30%,
+      rgba(248,232,182,.72) 0 18%,
+      transparent 19%),
+    radial-gradient(ellipse at 76% 58%,
+      rgba(169,216,203,.50) 0 20%,
+      transparent 21%),
+    radial-gradient(ellipse at 44% 62%,
+      rgba(220,239,247,.63) 0 19%,
+      transparent 20%);
+  transform: rotate(10deg);
+}
+
+/* 中身を装飾より前へ */
+[data-page="card"] .header,
+[data-page="card"] .themeBar,
+[data-page="card"] .categorySection,
+[data-page="card"] .cardSection,
+[data-page="card"] .orientationSection {
+  position: relative;
+  z-index: 1;
+}
+
+/* 見出し下の細い金ライン */
+[data-page="card"] .header h1 {
+  position: relative;
+}
+
+[data-page="card"] .header h1::after {
+  content: "";
+  display: block;
+  width: 88px;
+  height: 1px;
+  margin: 17px auto 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(216,180,111,.86),
+    transparent
+  );
+}
+
+/* Dailyと同じ小さなキラキラ */
+[data-page="card"] .header::before {
+  content: "✦";
+  position: absolute;
+  left: 13%;
+  top: 118px;
+  color: rgba(216,180,111,.78);
+  font-size: 12px;
+  pointer-events: none;
+}
+
+[data-page="card"] .header::after {
+  content: "◇";
+  position: absolute;
+  right: 12%;
+  top: 156px;
+  color: rgba(201,121,128,.62);
+  font-size: 17px;
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+/* セクション外枠も少しだけ金のニュアンス */
+[data-page="card"] .categorySection,
+[data-page="card"] .cardSection,
+[data-page="card"] .orientationSection {
+  border-color: rgba(216,180,111,.25) !important;
+  background: rgba(255,253,249,.88) !important;
+}
+
+
+/* ==================================================
+   RESULT CARD INFO - RESPONSIVE FINAL
+   PCは横並び / スマホはカード情報を読みやすく
+   ================================================== */
+
+@media (max-width: 430px) {
+
+  /* カード画像側を少し小さくして文字スペースを確保 */
+  .cardHero {
+    grid-template-columns: 116px minmax(0, 1fr) !important;
+    gap: 14px !important;
+    align-items: center !important;
+  }
+
+  .cardInfo {
+    min-width: 0 !important;
+    text-align: left !important;
+  }
+
+  /* 大アルカナ / ペンタクル等 */
+  .cardInfo .categoryName {
+    margin: 0 0 5px !important;
+    font-size: 11px !important;
+    line-height: 1.3 !important;
+    white-space: nowrap !important;
+  }
+
+  /* X 運命の輪 / キング / 7 等 */
+  .cardInfo h2 {
+    margin: 0 !important;
+    font-size: 23px !important;
+    line-height: 1.35 !important;
+    font-weight: 600 !important;
+    letter-spacing: 0 !important;
+  }
+
+  /* 正位置 / 逆位置 */
+  .cardInfo .orientationBadge {
+    margin-top: 8px !important;
+    padding: 5px 10px !important;
+    font-size: 10px !important;
+    line-height: 1 !important;
+  }
+
+  /* 人生の大きなテーマ / 仕事・お金・現実 等 */
+  .cardInfo .categorySubtitle {
+    margin-top: 9px !important;
+    font-size: 11px !important;
+    line-height: 1.5 !important;
+  }
+
+  .cardInfo .tinyDecoration {
+    margin-top: 8px !important;
+  }
 }
 
