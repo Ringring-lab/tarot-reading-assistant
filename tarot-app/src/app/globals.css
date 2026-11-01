@@ -145,3 +145,56 @@ select:focus-visible {
   color: var(--tarot-text);
 }
 
+
+
+/* DAILY FAMILY EMERGENCY POLISH */
+
+/* Daily系に残っている旧・虹色フレームを全ページで無効化 */
+.stainedFrame {
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+.stainedFrame::before,
+.stainedFrame::after {
+  display: none !important;
+}
+
+/* 共通のミルキーな紙面 */
+.paper {
+  border: 1px solid rgba(184, 162, 109, 0.26) !important;
+  background: rgba(255, 253, 248, 0.92) !important;
+  box-shadow: 0 18px 45px rgba(104, 92, 73, 0.06) !important;
+}
+
+/*
+ 日本語を1文字単位で変な位置に落としにくくする。
+ Chromeではauto-phraseが使える場合は文節を優先。
+*/
+h1,
+h2,
+h3 {
+  line-break: strict;
+  word-break: normal;
+  word-break: auto-phrase;
+  text-wrap: balance;
+}
+
+p,
+small,
+label,
+button {
+  line-break: strict;
+  word-break: normal;
+  word-break: auto-phrase;
+}
+
+/* 意味単位で指定した行は絶対に途中で割らない */
+.phraseLine {
+  display: block;
+  white-space: nowrap;
+}
+

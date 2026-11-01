@@ -293,7 +293,8 @@ export default function ResultPage() {
             </p>
 
             <h1>
-              今日のカードからのメッセージ
+              <span className="phraseLine">今日のカードからの</span>
+              <span className="phraseLine">メッセージ</span>
             </h1>
 
             <p className="lead">

@@ -259,8 +259,9 @@ export default function DailyPage() {
             {themeMode === "custom" && (
               <div className="customThemeBox">
                 <label htmlFor="customTheme">
-                  気になっていることを書いてください
-                </label>
+              <span className="phraseLine">気になっていることを</span>
+              <span className="phraseLine">書いてください</span>
+            </label>
 
                 <textarea
                   id="customTheme"
@@ -270,13 +271,12 @@ export default function DailyPage() {
                       event.target.value
                     )
                   }
-                  placeholder="例：今日の出会い運は？"
+                  placeholder="例：今日、気になる人と距離を縮めるには？"
                   rows={4}
                 />
 
                 <p className="helperText">
-                  自由入力では、質問に合わせてAIが読み解くため、
-                  結果表示まで少し時間がかかることがあります。
+                  自由入力では、質問に合わせて読み解くため、結果表示まで少し時間がかかることがあります。
                 </p>
 
                 <div className="examples">
@@ -286,22 +286,23 @@ export default function DailyPage() {
                     type="button"
                     onClick={() =>
                       useExample(
-                        "いい出会いを広げるために、今日は何を意識するといい？"
+                        "今日、仕事で力を発揮するために、何を意識するといい？"
                       )
                     }
                   >
-                    💕 いい出会いを広げるには？
+                    <span className="exampleLine">💼 今日、仕事で</span>
+                <span className="exampleLine">力を発揮するには？</span>
                   </button>
 
                   <button
                     type="button"
                     onClick={() =>
                       useExample(
-                        "仕事で自分の力を発揮するために、今日は何を意識するといい？"
+                        "今日の金運について、意識するといいことは？"
                       )
                     }
                   >
-                    💼 仕事で力を発揮するには？
+                    💰 今日の金運は？
                   </button>
                 </div>
               </div>
@@ -1613,6 +1614,100 @@ export default function DailyPage() {
         .eyebrow::after {
           right: -24px;
           font-size: 6px;
+        }
+
+
+
+        /* DAILY WRAP HARD FIX */
+
+        /* 見出しの文字領域をちゃんと確保 */
+        .sectionHeading {
+          display: grid;
+          grid-template-columns: 52px minmax(0, 1fr);
+          align-items: center;
+          column-gap: 12px;
+        }
+
+        .sectionHeading > div:last-child {
+          min-width: 0;
+          width: 100%;
+        }
+
+        .sectionHeading h2 {
+          width: 100%;
+          font-size: 17px !important;
+          line-height: 1.5;
+          word-break: keep-all !important;
+          overflow-wrap: normal !important;
+        }
+
+        .sectionHeading h2,
+        .sectionHeading h2 span,
+        .dailyNoBreak {
+          white-space: nowrap !important;
+        }
+
+        /* 選択肢のタイトルは途中で折らない */
+        .choiceText strong,
+        .actionText strong {
+          white-space: nowrap !important;
+          word-break: keep-all !important;
+          overflow-wrap: normal !important;
+        }
+
+        .choiceText strong {
+          font-size: 13px !important;
+        }
+
+        .actionText strong {
+          font-size: 14px !important;
+        }
+
+        /* 説明文は単語・文節の途中で割れにくくする */
+        .lead,
+        .sectionDescription,
+        .choiceText small,
+        .actionText small {
+          word-break: keep-all !important;
+          overflow-wrap: normal !important;
+        }
+
+        @media (max-width: 390px) {
+          .sectionHeading {
+            grid-template-columns: 48px minmax(0, 1fr);
+            column-gap: 10px;
+          }
+
+          .sectionHeading h2 {
+            font-size: 16px !important;
+          }
+
+          .choiceText strong {
+            font-size: 12.5px !important;
+          }
+
+          .actionText strong {
+            font-size: 13.5px !important;
+          }
+        }
+
+
+
+        /* FINAL SEMANTIC WRAP */
+
+        .questionTitleLine,
+        .exampleLine {
+          display: block;
+          white-space: nowrap;
+        }
+
+        .questionTitleLine {
+          line-height: 1.45;
+        }
+
+        .exampleLine {
+          text-align: center;
+          line-height: 1.45;
         }
 
 `}</style>
